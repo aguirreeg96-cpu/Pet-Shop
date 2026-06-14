@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Alimentos Balanceados — Patitas Pet Shop 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    @page { size: A4 portrait; margin: 0; }
+
+    :root {
+      --orange:       #F97316;
+      --orange-dark:  #C2550A;
+      --orange-light: #FED7AA;
+      --navy:         #1E3A5F;
+      --navy-light:   #2D5282;
+      --green:        #10B981;
+      --cream:        #FFF7ED;
+      --warm-gray:    #F9F5F0;
+      --text-dark:    #1A1A2E;
+      --text-muted:   #6B7280;
+      --border:       #E5E7EB;
+    }
+
+    body {
+      font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+      background: #DCDCDC;
+      color: var(--text-dark);
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto 18px;
+      background: #fff;
+      position: relative;
+      overflow: hidden;
+      page-break-after: always;
+      break-after: page;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    }
+
+    @media print {
+      body { background: none; }
+      .page { margin: 0; box-shadow: none; }
+    }
+
+    /* ================================
+       COVER PAGE
+    ================================ */
+    .cover-page {
+      background: linear-gradient(155deg, #0F2540 0%, #1E3A5F 45%, #162842 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 297mm;
+    }
+
+    .cover-accent-top {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 7px;
+      background: linear-gradient(90deg, var(--orange-dark), #FBB040, var(--orange-dark));
+    }
+    .cover-accent-bottom {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 7px;
+      background: linear-gradient(90deg, var(--orange-dark), #FBB040, var(--orange-dark));
+    }
+
+    .cover-orb-1 {
+      position: absolute; top: -90px; left: -90px;
+      width: 380px; height: 380px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(249,115,22,0.12) 0%, transparent 70%);
+    }
+    .cover-orb-2 {
+      position: absolute; bottom: 60px; right: -80px;
+      width: 320px; height: 320px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(59,130,246,0.10) 0%, transparent 70%);
+    }
+    .cover-orb-3 {
+      position: absolute; bottom: -60px; left: 30px;
+      width: 200px; height: 200px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(249,115,22,0.07) 0%, transparent 70%);
+    }
+
+    .cover-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      z-index: 2;
+      padding: 20px 50px;
+    }
+
+    .cover-logo-ring {
+      width: 130px; height: 130px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), #FBB040);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 28px;
+      box-shadow: 0 0 0 10px rgba(249,115,22,0.12), 0 20px 60px rgba(249,115,22,0.35);
+    }
+    .cover-logo-ring svg { width: 75px; height: 75px; fill: white; }
+
+    .cover-eyebrow {
+      font-size: 10.5px; font-weight: 700;
+      letter-spacing: 5px; text-transform: uppercase;
+      color: var(--orange); margin-bottom: 10px;
+    }
+
+    .cover-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 58px; font-weight: 700; line-height: 1.0;
+      color: #fff; margin-bottom: 4px;
+    }
+    .cover-title span { color: var(--orange); }
+
+    .cover-rule {
+      width: 70px; height: 2px; margin: 22px auto;
+      background: linear-gradient(90deg, transparent, var(--orange), transparent);
+    }
+
+    .cover-catalog-name {
+      font-size: 20px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 2px;
+      color: #fff; margin-bottom: 10px;
+    }
+
+    .cover-catalog-sub {
+      font-size: 14px; font-weight: 300;
+      color: rgba(255,255,255,0.65); letter-spacing: 0.5px;
+      margin-bottom: 44px;
+    }
+
+    .cover-bags {
+      display: flex; align-items: flex-end; gap: 32px;
+      margin-bottom: 40px;
+    }
+
+    .cover-pill {
+      background: rgba(249,115,22,0.14);
+      border: 1px solid rgba(249,115,22,0.35);
+      border-radius: 30px; padding: 8px 28px;
+      font-size: 11px; font-weight: 700;
+      color: var(--orange-light); letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .cover-footer-note {
+      position: absolute; bottom: 22px;
+      left: 0; right: 0; text-align: center;
+      font-size: 10px; color: rgba(255,255,255,0.35);
+      letter-spacing: 0.8px;
+    }
+
+    /* ================================
+       SHARED: PAGE HEADER & FOOTER
+    ================================ */
+    .ph {
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      padding: 15px 32px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .ph-brand {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .ph-dot {
+      width: 34px; height: 34px; border-radius: 50%;
+      background: var(--orange);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .ph-dot svg { width: 19px; height: 19px; fill: white; }
+    .ph-name { font-size: 15px; font-weight: 700; color: #fff; }
+    .ph-contact {
+      font-size: 9.5px; color: rgba(255,255,255,0.65);
+      text-align: right; line-height: 1.9;
+    }
+
+    .pf {
+      background: var(--navy);
+      padding: 11px 32px;
+      display: flex; align-items: center; justify-content: space-between;
+      position: absolute; bottom: 0; left: 0; right: 0;
+    }
+    .pf span { font-size: 9px; color: rgba(255,255,255,0.45); }
+    .pf .pf-hi { color: var(--orange); font-weight: 700; }
+
+    /* ================================
+       SECTION BANNER
+    ================================ */
+    .sec-banner {
+      padding: 18px 32px;
+      display: flex; align-items: center; gap: 18px;
+    }
+    .sec-banner.dogs {
+      background: linear-gradient(135deg, #FFF7ED, #FFEDD5);
+      border-bottom: 3px solid var(--orange);
+    }
+    .sec-banner.cats {
+      background: linear-gradient(135deg, #EFF6FF, #DBEAFE);
+      border-bottom: 3px solid #3B82F6;
+    }
+
+    .sec-icon {
+      width: 54px; height: 54px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .sec-icon.dogs { background: var(--orange); }
+    .sec-icon.cats { background: #3B82F6; }
+    .sec-icon svg { width: 30px; height: 30px; fill: white; }
+
+    .sec-text h2 { font-size: 21px; font-weight: 800; }
+    .sec-text h2.d { color: var(--orange-dark); }
+    .sec-text h2.c { color: #1D4ED8; }
+    .sec-text p { font-size: 11px; color: var(--text-muted); margin-top: 3px; font-weight: 500; }
+
+    .sec-badge {
+      margin-left: auto; padding: 6px 16px; border-radius: 20px;
+      font-size: 10px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: white;
+    }
+    .sec-badge.dogs { background: var(--orange); }
+    .sec-badge.cats { background: #3B82F6; }
+
+    /* ================================
+       PRODUCT TABLE
+    ================================ */
+    .tbl-wrap { padding: 16px 32px; }
+
+    table { width: 100%; border-collapse: collapse; font-size: 12px; }
+
+    thead th {
+      padding: 11px 14px;
+      text-align: left; font-size: 10px; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase; color: white;
+    }
+    thead th:last-child { text-align: right; }
+
+    thead.th-dogs { background: var(--navy); }
+    thead.th-cats { background: #1D4ED8; }
+
+    tbody tr { border-bottom: 1px solid var(--border); }
+    tbody tr:nth-child(even) { background: var(--warm-gray); }
+    tbody td { padding: 10px 14px; vertical-align: middle; }
+    tbody td:last-child { text-align: right; }
+
+    .b { font-weight: 700; }
+    .royal   { color: #B91C1C; }
+    .proplan { color: #C2550A; }
+    .excl    { color: #065F46; }
+    .oldpr   { color: #6D28D9; }
+    .dogchow { color: #DC2626; }
+    .pedigr  { color: #1D4ED8; }
+    .catchow { color: #DC2626; }
+    .whiskas { color: #7C3AED; }
+
+    .prod { font-weight: 500; }
+
+    .badge-pres {
+      display: inline-block; background: var(--border);
+      color: var(--text-muted); padding: 2px 10px;
+      border-radius: 12px; font-size: 11px; font-weight: 600;
+    }
+
+    .price {
+      font-weight: 800; font-size: 13.5px; white-space: nowrap;
+    }
+    .price-d { color: var(--orange-dark); }
+    .price-c { color: #1D4ED8; }
+
+    .tbl-note {
+      padding: 8px 32px 55px;
+      font-size: 9px; color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      line-height: 1.8;
+    }
+
+    .sec-note {
+      padding: 6px 32px 0;
+      font-size: 10px; color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* ================================
+       BENEFITS PAGE
+    ================================ */
+    .ben-inner { padding: 0 32px 70px; }
+
+    .ben-head {
+      text-align: center; padding: 28px 0 0;
+    }
+    .ben-head .over {
+      font-size: 10px; font-weight: 700; letter-spacing: 3.5px;
+      text-transform: uppercase; color: var(--orange);
+      display: block; margin-bottom: 8px;
+    }
+    .ben-head h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 32px; font-weight: 700; color: var(--navy);
+    }
+    .ben-head p {
+      font-size: 12.5px; color: var(--text-muted);
+      margin-top: 10px; line-height: 1.6;
+    }
+    .ben-rule {
+      width: 55px; height: 3px; border-radius: 2px;
+      background: var(--orange); margin: 16px auto 0;
+    }
+
+    .ben-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 28px;
+    }
+
+    .ben-card {
+      border: 1px solid var(--border); border-radius: 16px;
+      padding: 26px 22px; display: flex; flex-direction: column;
+      align-items: center; text-align: center; position: relative; overflow: hidden;
+      background: linear-gradient(160deg, var(--cream) 0%, #fff 100%);
+    }
+    .ben-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    }
+    .bc1::before { background: var(--orange); }
+    .bc2::before { background: var(--green); }
+    .bc3::before { background: #3B82F6; }
+    .bc4::before { background: #8B5CF6; }
+
+    .ben-icon {
+      width: 72px; height: 72px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; margin-bottom: 14px;
+    }
+    .bi1 { background: linear-gradient(135deg, #FED7AA, var(--orange-light)); }
+    .bi2 { background: linear-gradient(135deg, #A7F3D0, #D1FAE5); }
+    .bi3 { background: linear-gradient(135deg, #BFDBFE, #DBEAFE); }
+    .bi4 { background: linear-gradient(135deg, #DDD6FE, #EDE9FE); }
+    .ben-icon svg { width: 36px; height: 36px; }
+
+    .ben-card h3 {
+      font-size: 15px; font-weight: 800; color: var(--navy); margin-bottom: 10px;
+    }
+    .ben-card p { font-size: 11.5px; color: var(--text-muted); line-height: 1.65; }
+
+    .promo-bar {
+      margin-top: 28px;
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      border-radius: 16px; padding: 22px 28px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .promo-bar-left .over {
+      font-size: 9.5px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--orange); display: block; margin-bottom: 5px;
+    }
+    .promo-bar-left h3 { font-size: 17px; font-weight: 700; color: #fff; }
+    .promo-bar-left p { font-size: 11px; color: rgba(255,255,255,0.55); margin-top: 4px; }
+    .promo-badge {
+      background: var(--orange); border-radius: 12px;
+      padding: 14px 18px; text-align: center; flex-shrink: 0; margin-left: 20px;
+    }
+    .promo-badge .s1 { font-size: 10px; font-weight: 700; color: white; letter-spacing: 1px; }
+    .promo-badge .s2 { font-size: 30px; font-weight: 900; color: white; line-height: 1.1; }
+
+    /* ================================
+       CONTACT PAGE
+    ================================ */
+    .contact-page {
+      background: linear-gradient(155deg, #0F2540 0%, #1E3A5F 50%, #162842 100%);
+      min-height: 297mm; display: flex; flex-direction: column;
+    }
+    .ct-top-bar {
+      height: 7px;
+      background: linear-gradient(90deg, var(--orange-dark), #FBB040, var(--orange-dark));
+    }
+    .ct-body {
+      flex: 1; padding: 38px 48px;
+      display: flex; flex-direction: column; align-items: center;
+    }
+    .ct-orb1 {
+      position: absolute; right: -70px; top: -70px;
+      width: 280px; height: 280px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(249,115,22,0.09) 0%, transparent 70%);
+    }
+    .ct-orb2 {
+      position: absolute; left: -50px; bottom: 120px;
+      width: 220px; height: 220px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 70%);
+    }
+
+    .ct-head { text-align: center; margin-bottom: 38px; }
+    .ct-head .over {
+      font-size: 10px; font-weight: 700; letter-spacing: 4px;
+      text-transform: uppercase; color: var(--orange);
+      display: block; margin-bottom: 8px;
+    }
+    .ct-head h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 38px; font-weight: 700; color: #fff; margin-bottom: 8px;
+    }
+    .ct-head p { font-size: 13px; color: rgba(255,255,255,0.55); }
+    .ct-rule {
+      width: 55px; height: 2px; background: var(--orange); margin: 14px auto 0;
+    }
+
+    .ct-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+      width: 100%; margin-bottom: 30px;
+    }
+
+    .ct-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.11);
+      border-radius: 16px; padding: 22px 20px;
+      display: flex; align-items: flex-start; gap: 16px;
+    }
+    .ct-icon {
+      width: 48px; height: 48px; border-radius: 13px;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .ic-wa   { background: #25D366; }
+    .ic-ig   { background: linear-gradient(135deg, #FD1D1D, #E1306C, #833AB4); }
+    .ic-loc  { background: var(--orange); }
+    .ic-clk  { background: #3B82F6; }
+    .ct-icon svg { width: 25px; height: 25px; fill: white; }
+
+    .ct-info .lbl {
+      font-size: 9px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: rgba(255,255,255,0.38);
+      margin-bottom: 6px;
+    }
+    .ct-info .val { font-size: 15px; font-weight: 700; color: #fff; line-height: 1.35; }
+    .ct-info .sub { font-size: 11px; color: rgba(255,255,255,0.55); margin-top: 3px; }
+
+    .ct-logo-wrap {
+      display: flex; flex-direction: column; align-items: center;
+      margin-top: auto; padding-top: 20px;
+    }
+    .ct-logo-row {
+      display: flex; align-items: center; gap: 14px; margin-bottom: 10px;
+    }
+    .ct-logo-circle {
+      width: 54px; height: 54px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), #FBB040);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 0 0 6px rgba(249,115,22,0.15);
+    }
+    .ct-logo-circle svg { width: 30px; height: 30px; fill: white; }
+    .ct-logo-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 28px; font-weight: 700; color: white;
+    }
+    .ct-tagline {
+      font-size: 12px; color: rgba(255,255,255,0.4);
+      font-style: italic; letter-spacing: 0.3px;
+    }
+
+    .ct-bottom-bar {
+      height: 7px;
+      background: linear-gradient(90deg, var(--orange-dark), #FBB040, var(--orange-dark));
+    }
+  </style>
+</head>
+<body>
+
+<!-- ==============================
+     PÁGINA 1 — PORTADA
+============================== -->
+<div class="page cover-page">
+  <div class="cover-accent-top"></div>
+  <div class="cover-orb-1"></div>
+  <div class="cover-orb-2"></div>
+  <div class="cover-orb-3"></div>
+
+  <div class="cover-body">
+
+    <!-- Logo -->
+    <div class="cover-logo-ring">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="50" cy="68" rx="23" ry="18"/>
+        <ellipse cx="25" cy="46" rx="10.5" ry="13"/>
+        <ellipse cx="43" cy="36" rx="10.5" ry="13"/>
+        <ellipse cx="61" cy="36" rx="10.5" ry="13"/>
+        <ellipse cx="77" cy="46" rx="10.5" ry="13"/>
+      </svg>
+    </div>
+
+    <div class="cover-eyebrow">✦ Pet Shop Especializado ✦</div>
+
+    <div class="cover-title">
+      Patitas<br><span>Pet Shop</span>
+    </div>
+
+    <div class="cover-rule"></div>
+
+    <div class="cover-catalog-name">Catálogo de Alimentos Balanceados</div>
+    <div class="cover-catalog-sub">Nutrición de calidad para tus mascotas</div>
+
+    <!-- Bolsas de alimento ilustradas en SVG -->
+    <div class="cover-bags">
+
+      <!-- Bolsa Perros -->
+      <svg width="130" height="175" viewBox="0 0 130 175" xmlns="http://www.w3.org/2000/svg">
+        <!-- sombra -->
+        <ellipse cx="65" cy="172" rx="50" ry="5" fill="rgba(0,0,0,0.3)"/>
+        <!-- cuerpo bolsa -->
+        <rect x="12" y="35" width="106" height="132" rx="10" fill="#C2550A"/>
+        <rect x="12" y="35" width="106" height="132" rx="10" fill="url(#gBag)"/>
+        <defs>
+          <linearGradient id="gBag" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#F97316"/>
+            <stop offset="100%" stop-color="#9A3D08"/>
+          </linearGradient>
+        </defs>
+        <!-- cierre/pliegue superior -->
+        <rect x="22" y="12" width="86" height="28" rx="5" fill="#9A3D08"/>
+        <rect x="42" y="6" width="46" height="12" rx="6" fill="#7A2F05"/>
+        <!-- etiqueta blanca -->
+        <rect x="20" y="70" width="90" height="82" rx="8" fill="white" opacity="0.92"/>
+        <!-- header etiqueta -->
+        <rect x="27" y="77" width="76" height="20" rx="4" fill="#1E3A5F"/>
+        <text x="65" y="91" font-family="Arial,sans-serif" font-size="9" font-weight="bold" fill="white" text-anchor="middle">ALIMENTO PREMIUM</text>
+        <!-- silueta perro -->
+        <ellipse cx="65" cy="122" rx="24" ry="9" fill="#F97316" opacity="0.18"/>
+        <ellipse cx="65" cy="116" rx="15" ry="10" fill="#C2550A" opacity="0.22"/>
+        <circle cx="65" cy="106" r="9" fill="#C2550A" opacity="0.22"/>
+        <ellipse cx="54" cy="111" rx="4" ry="7" fill="#C2550A" opacity="0.15"/>
+        <ellipse cx="76" cy="111" rx="4" ry="7" fill="#C2550A" opacity="0.15"/>
+        <!-- orejas -->
+        <ellipse cx="58" cy="100" rx="5" ry="8" fill="#C2550A" opacity="0.18" transform="rotate(-15 58 100)"/>
+        <ellipse cx="72" cy="100" rx="5" ry="8" fill="#C2550A" opacity="0.18" transform="rotate(15 72 100)"/>
+        <!-- texto producto -->
+        <text x="65" y="140" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#C2550A" text-anchor="middle">PERROS</text>
+        <!-- croquetas decorativas -->
+        <circle cx="30" cy="158" r="5" fill="rgba(255,255,255,0.25)"/>
+        <circle cx="42" cy="162" r="4" fill="rgba(255,255,255,0.18)"/>
+        <circle cx="98" cy="156" r="5" fill="rgba(255,255,255,0.25)"/>
+        <circle cx="110" cy="160" r="3.5" fill="rgba(255,255,255,0.18)"/>
+      </svg>
+
+      <!-- Bolsa Gatos -->
+      <svg width="108" height="152" viewBox="0 0 108 152" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="54" cy="149" rx="42" ry="4" fill="rgba(0,0,0,0.3)"/>
+        <rect x="10" y="30" width="88" height="114" rx="10" fill="url(#gCat)"/>
+        <defs>
+          <linearGradient id="gCat" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#3B82F6"/>
+            <stop offset="100%" stop-color="#1D4ED8"/>
+          </linearGradient>
+        </defs>
+        <rect x="18" y="10" width="72" height="24" rx="5" fill="#1D4ED8"/>
+        <rect x="34" y="5" width="40" height="10" rx="5" fill="#1740AE"/>
+        <!-- etiqueta -->
+        <rect x="16" y="58" width="76" height="72" rx="8" fill="white" opacity="0.92"/>
+        <!-- header -->
+        <rect x="22" y="64" width="64" height="17" rx="4" fill="#1D4ED8"/>
+        <text x="54" y="76" font-family="Arial,sans-serif" font-size="8" font-weight="bold" fill="white" text-anchor="middle">ALIMENTO PREMIUM</text>
+        <!-- silueta gato -->
+        <circle cx="54" cy="98" r="13" fill="#3B82F6" opacity="0.15"/>
+        <!-- orejas -->
+        <polygon points="43,88 39,78 47,84" fill="#1D4ED8" opacity="0.22"/>
+        <polygon points="65,88 69,78 61,84" fill="#1D4ED8" opacity="0.22"/>
+        <!-- ojos -->
+        <ellipse cx="47" cy="95" rx="4" ry="5" fill="#1D4ED8" opacity="0.28"/>
+        <ellipse cx="61" cy="95" rx="4" ry="5" fill="#1D4ED8" opacity="0.28"/>
+        <!-- bigotes -->
+        <line x1="30" y1="100" x2="45" y2="101" stroke="#1D4ED8" stroke-width="1" opacity="0.3"/>
+        <line x1="30" y1="104" x2="45" y2="103" stroke="#1D4ED8" stroke-width="1" opacity="0.3"/>
+        <line x1="63" y1="101" x2="78" y2="100" stroke="#1D4ED8" stroke-width="1" opacity="0.3"/>
+        <line x1="63" y1="103" x2="78" y2="104" stroke="#1D4ED8" stroke-width="1" opacity="0.3"/>
+        <text x="54" y="120" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#1D4ED8" text-anchor="middle">GATOS</text>
+        <circle cx="24" cy="136" r="4" fill="rgba(255,255,255,0.25)"/>
+        <circle cx="34" cy="140" r="3" fill="rgba(255,255,255,0.18)"/>
+        <circle cx="82" cy="134" r="4" fill="rgba(255,255,255,0.25)"/>
+      </svg>
+
+    </div>
+
+    <div class="cover-pill">Lista de Precios · 2025</div>
+  </div>
+
+  <div class="cover-footer-note">
+    📞 +54 11 1234-5678 &nbsp;|&nbsp; 📍 Av. Siempreverde 1234, Buenos Aires &nbsp;|&nbsp; 📱 @patitaspetshop
+  </div>
+  <div class="cover-accent-bottom"></div>
+</div>
+
+
+<!-- ==============================
+     PÁGINA 2 — ALIMENTOS PARA PERROS
+============================== -->
+<div class="page">
+
+  <!-- Encabezado -->
+  <div class="ph">
+    <div class="ph-brand">
+      <div class="ph-dot">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="50" cy="68" rx="23" ry="18"/>
+          <ellipse cx="25" cy="46" rx="10.5" ry="13"/>
+          <ellipse cx="43" cy="36" rx="10.5" ry="13"/>
+          <ellipse cx="61" cy="36" rx="10.5" ry="13"/>
+          <ellipse cx="77" cy="46" rx="10.5" ry="13"/>
+        </svg>
+      </div>
+      <span class="ph-name">Patitas Pet Shop</span>
+    </div>
+    <div class="ph-contact">
+      📞 +54 11 1234-5678 &nbsp;·&nbsp; 📱 @patitaspetshop &nbsp;·&nbsp; 📍 Av. Siempreverde 1234, CABA
+    </div>
+  </div>
+
+  <!-- Banner de sección -->
+  <div class="sec-banner dogs">
+    <div class="sec-icon dogs">
+      <!-- Ícono perro simplificado -->
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="50" cy="62" rx="26" ry="19" fill="white"/>
+        <circle cx="50" cy="38" r="17" fill="white"/>
+        <ellipse cx="30" cy="33" rx="9" ry="13" fill="white" transform="rotate(-18 30 33)"/>
+        <ellipse cx="70" cy="33" rx="9" ry="13" fill="white" transform="rotate(18 70 33)"/>
+        <ellipse cx="50" cy="43" rx="6" ry="4" fill="#F97316"/>
+        <circle cx="42" cy="32" r="2.5" fill="#F97316"/>
+        <circle cx="58" cy="32" r="2.5" fill="#F97316"/>
+        <path d="M78 58 Q96 42 90 28" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <ellipse cx="42" cy="77" rx="4" ry="7" fill="white"/>
+        <ellipse cx="58" cy="77" rx="4" ry="7" fill="white"/>
+      </svg>
+    </div>
+    <div class="sec-text">
+      <h2 class="d">🐕 Alimentos para Perros</h2>
+      <p>Selección premium de alimentos balanceados para todas las razas y etapas de vida</p>
+    </div>
+    <div class="sec-badge dogs">Sección 01</div>
+  </div>
+
+  <p class="sec-note">* Precios en pesos argentinos (ARS) con IVA incluido · Sujetos a modificación sin previo aviso · Consulte stock disponible</p>
+
+  <!-- Tabla de productos -->
+  <div class="tbl-wrap">
+    <table>
+      <thead class="th-dogs">
+        <tr>
+          <th>Marca</th>
+          <th>Producto</th>
+          <th>Presentación</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- Royal Canin -->
+        <tr>
+          <td><span class="b royal">Royal Canin</span></td>
+          <td class="prod">Adulto Medium</td>
+          <td><span class="badge-pres">3 kg</span></td>
+          <td class="price price-d">$18.500</td>
+        </tr>
+        <tr>
+          <td><span class="b royal">Royal Canin</span></td>
+          <td class="prod">Adulto Medium</td>
+          <td><span class="badge-pres">15 kg</span></td>
+          <td class="price price-d">$72.000</td>
+        </tr>
+        <tr>
+          <td><span class="b royal">Royal Canin</span></td>
+          <td class="prod">Maxi Adult</td>
+          <td><span class="badge-pres">3 kg</span></td>
+          <td class="price price-d">$19.000</td>
+        </tr>
+        <tr>
+          <td><span class="b royal">Royal Canin</span></td>
+          <td class="prod">Maxi Adult</td>
+          <td><span class="badge-pres">15 kg</span></td>
+          <td class="price price-d">$78.500</td>
+        </tr>
+        <tr>
+          <td><span class="b royal">Royal Canin</span></td>
+          <td class="prod">Maxi Puppy</td>
+          <td><span class="badge-pres">15 kg</span></td>
+          <td class="price price-d">$82.000</td>
+        </tr>
+
+        <!-- Pro Plan -->
+        <tr>
+          <td><span class="b proplan">Pro Plan</span></td>
+          <td class="prod">Adulto Razas Medianas — Pollo</td>
+          <td><span class="badge-pres">3 kg</span></td>
+          <td class="price price-d">$16.800</td>
+        </tr>
+        <tr>
+          <td><span class="b proplan">Pro Plan</span></td>
+          <td class="prod">Adulto Razas Medianas — Pollo</td>
+          <td><span class="badge-pres">15 kg</span></td>
+          <td class="price price-d">$65.000</td>
+        </tr>
+        <tr>
+          <td><span class="b proplan">Pro Plan</span></td>
+          <td class="prod">Puppy Razas Medianas</td>
+          <td><span class="badge-pres">3 kg</span></td>
+          <td class="price price-d">$17.500</td>
+        </tr>
+        <tr>
+          <td><span class="b proplan">Pro Plan</span></td>
+          <td class="prod">Puppy Razas Medianas</td>
+          <td><span class="badge-pres">12 kg</span></td>
+          <td class="price price-d">$62.000</td>
+        </tr>
+
+        <!-- Excellent -->
+        <tr>
+          <td><span class="b excl">Excellent</span></td>
+          <td class="prod">Adulto Razas Grandes</td>
+          <td><span class="badge-pres">15 kg</span></td>
+          <td class="price price-d">$42.000</td>
+        </tr>
+        <tr>
+          <td><span class="b excl">Excellent</span></td>
+          <td class="prod">Adulto Razas Grandes</td>
+          <td><span class="badge-pres">25 kg</span></td>
+          <td class="price price-d">$64.000</td>
+        </tr>
+
+        <!-- Old Prince -->
+        <tr>
+          <td><span class="b oldpr">Old Prince</span></td>
+          <td class="prod">Adulto Todas las Razas</td>
+          <td><span class="badge-pres">20 kg</span></td>
+          <td class="price price-d">$38.500</td>
+        </tr>
+        <tr>
+          <td><span class="b oldpr">Old Prince</span></td>
+          <td class="prod">Cachorro Todas las Razas</td>
+          <td><span class="badge-pres">20 kg</span></td>
+          <td class="price price-d">$40.000</td>
+        </tr>
+
+        <!-- Dog Chow -->
+        <tr>
+          <td><span class="b dogchow">Dog Chow</span></td>
+          <td class="prod">Adulto Razas Medianas</td>
+          <td><span class="badge-pres">21 kg</span></td>
+          <td class="price price-d">$32.000</td>
+        </tr>
+        <tr>
+          <td><span class="b dogchow">Dog Chow</span></td>
+          <td class="prod">Cachorros</td>
+          <td><span class="badge-pres">8 kg</span></td>
+          <td class="price price-d">$14.500</td>
+        </tr>
+
+        <!-- Pedigree -->
+        <tr>
+          <td><span class="b pedigr">Pedigree</span></td>
+          <td class="prod">Adulto Carne y Vegetales</td>
+          <td><span class="badge-pres">21 kg</span></td>
+          <td class="price price-d">$28.000</td>
+        </tr>
+        <tr>
+          <td><span class="b pedigr">Pedigree</span></td>
+          <td class="prod">Cachorros Leche y Cereales</td>
+          <td><span class="badge-pres">8 kg</span></td>
+          <td class="price price-d">$13.500</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tbl-note">
+    ✦ Todos los precios incluyen IVA &nbsp;·&nbsp; ✦ Descuentos especiales en compras mayoristas &nbsp;·&nbsp; ✦ Stock sujeto a disponibilidad &nbsp;·&nbsp; ✦ Aceptamos todas las formas de pago
+  </div>
+
+  <!-- Pie de página -->
+  <div class="pf">
+    <span>Patitas Pet Shop — Catálogo 2025</span>
+    <span class="pf-hi">Sección 01 · Alimentos para Perros</span>
+    <span>Página 2 / 5</span>
+  </div>
+</div>
+
+
+<!-- ==============================
+     PÁGINA 3 — ALIMENTOS PARA GATOS
+============================== -->
+<div class="page">
+
+  <div class="ph">
+    <div class="ph-brand">
+      <div class="ph-dot">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="50" cy="68" rx="23" ry="18"/>
+          <ellipse cx="25" cy="46" rx="10.5" ry="13"/>
+          <ellipse cx="43" cy="36" rx="10.5" ry="13"/>
+          <ellipse cx="61" cy="36" rx="10.5" ry="13"/>
+          <ellipse cx="77" cy="46" rx="10.5" ry="13"/>
+        </svg>
+      </div>
+      <span class="ph-name">Patitas Pet Shop</span>
+    </div>
+    <div class="ph-contact">
+      📞 +54 11 1234-5678 &nbsp;·&nbsp; 📱 @patitaspetshop &nbsp;·&nbsp; 📍 Av. Siempreverde 1234, CABA
+    </div>
+  </div>
+
+  <div class="sec-banner cats">
+    <div class="sec-icon cats">
+      <!-- Ícono gato -->
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="57" r="22" fill="white"/>
+        <!-- orejas -->
+        <polygon points="30,42 24,20 44,34" fill="white"/>
+        <polygon points="70,42 76,20 56,34" fill="white"/>
+        <!-- ojos -->
+        <ellipse cx="40" cy="52" rx="5" ry="6" fill="#3B82F6"/>
+        <ellipse cx="60" cy="52" rx="5" ry="6" fill="#3B82F6"/>
+        <ellipse cx="40" cy="53" rx="2" ry="5" fill="#1D4ED8"/>
+        <ellipse cx="60" cy="53" rx="2" ry="5" fill="#1D4ED8"/>
+        <!-- nariz -->
+        <polygon points="50,60 46,65 54,65" fill="#F97316"/>
+        <!-- bigotes -->
+        <line x1="22" y1="61" x2="42" y2="63" stroke="white" stroke-width="1.8"/>
+        <line x1="22" y1="66" x2="42" y2="66" stroke="white" stroke-width="1.8"/>
+        <line x1="58" y1="63" x2="78" y2="61" stroke="white" stroke-width="1.8"/>
+        <line x1="58" y1="66" x2="78" y2="66" stroke="white" stroke-width="1.8"/>
+        <!-- cola -->
+        <path d="M72 72 Q90 60 85 45" stroke="white" stroke-width="5" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="sec-text">
+      <h2 class="c">🐈 Alimentos para Gatos</h2>
+      <p>Nutrición especializada para felinos en todas sus etapas de vida</p>
+    </div>
+    <div class="sec-badge cats">Sección 02</div>
+  </div>
+
+  <p class="sec-note">* Precios en pesos argentinos (ARS) con IVA incluido · Sujetos a modificación sin previo aviso · Consulte stock disponible</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead class="th-cats">
+        <tr>
+          <th>Marca</th>
+          <th>Producto</th>
+          <th>Presentación</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- Royal Canin -->
+        <tr>
+          <td><span class="b royal">Royal Canin</span></td>
+          <td class="prod">Indoor Adult</td>
+          <td><span class="badge-pres">1.5 kg</span></td>
+          <td class="price price-c">$14.500</td>
+        </tr>
+        <tr>
+          <td><span class="b royal">Royal Canin</span></td>
+          <td class="prod">Indoor Adult</td>
+          <td><span class="badge-pres">7.5 kg</span></td>
+          <td class="price price-c">$58.000</td>
+        </tr>
+        <tr>
+          <td><span class="b royal">Royal Canin</span></td>
+          <td class="prod">Kitten</td>
+          <td><span class="badge-pres">2 kg</span></td>
+          <td class="price price-c">$18.000</td>
+        </tr>
+        <tr>
+          <td><span class="b royal">Royal Canin</span></td>
+          <td class="prod">Kitten</td>
+          <td><span class="badge-pres">10 kg</span></td>
+          <td class="price price-c">$75.000</td>
+        </tr>
+        <tr>
+          <td><span class="b royal">Royal Canin</span></td>
+          <td class="prod">Sterilised Adult</td>
+          <td><span class="badge-pres">3.5 kg</span></td>
+          <td class="price price-c">$26.500</td>
+        </tr>
+
+        <!-- Pro Plan -->
+        <tr>
+          <td><span class="b proplan">Pro Plan</span></td>
+          <td class="prod">Adult Cat — Salmón</td>
+          <td><span class="badge-pres">1.5 kg</span></td>
+          <td class="price price-c">$12.800</td>
+        </tr>
+        <tr>
+          <td><span class="b proplan">Pro Plan</span></td>
+          <td class="prod">Adult Cat — Salmón</td>
+          <td><span class="badge-pres">7.5 kg</span></td>
+          <td class="price price-c">$52.000</td>
+        </tr>
+        <tr>
+          <td><span class="b proplan">Pro Plan</span></td>
+          <td class="prod">Kitten — Pollo</td>
+          <td><span class="badge-pres">1.5 kg</span></td>
+          <td class="price price-c">$13.500</td>
+        </tr>
+        <tr>
+          <td><span class="b proplan">Pro Plan</span></td>
+          <td class="prod">Kitten — Pollo</td>
+          <td><span class="badge-pres">7.5 kg</span></td>
+          <td class="price price-c">$54.000</td>
+        </tr>
+
+        <!-- Excellent -->
+        <tr>
+          <td><span class="b excl">Excellent</span></td>
+          <td class="prod">Cat Adulto</td>
+          <td><span class="badge-pres">7.5 kg</span></td>
+          <td class="price price-c">$32.000</td>
+        </tr>
+        <tr>
+          <td><span class="b excl">Excellent</span></td>
+          <td class="prod">Cat Gatito</td>
+          <td><span class="badge-pres">7.5 kg</span></td>
+          <td class="price price-c">$33.500</td>
+        </tr>
+
+        <!-- Cat Chow -->
+        <tr>
+          <td><span class="b catchow">Cat Chow</span></td>
+          <td class="prod">Adulto — Sabores del Campo</td>
+          <td><span class="badge-pres">8 kg</span></td>
+          <td class="price price-c">$22.000</td>
+        </tr>
+        <tr>
+          <td><span class="b catchow">Cat Chow</span></td>
+          <td class="prod">Gatitos</td>
+          <td><span class="badge-pres">1.5 kg</span></td>
+          <td class="price price-c">$7.500</td>
+        </tr>
+
+        <!-- Whiskas -->
+        <tr>
+          <td><span class="b whiskas">Whiskas</span></td>
+          <td class="prod">Adulto — Pollo y Pavo</td>
+          <td><span class="badge-pres">3 kg</span></td>
+          <td class="price price-c">$9.500</td>
+        </tr>
+        <tr>
+          <td><span class="b whiskas">Whiskas</span></td>
+          <td class="prod">Adulto — Atún y Salmón</td>
+          <td><span class="badge-pres">3 kg</span></td>
+          <td class="price price-c">$9.800</td>
+        </tr>
+        <tr>
+          <td><span class="b whiskas">Whiskas</span></td>
+          <td class="prod">Gatitos — Leche y Pollo</td>
+          <td><span class="badge-pres">1.5 kg</span></td>
+          <td class="price price-c">$6.800</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tbl-note">
+    ✦ Todos los precios incluyen IVA &nbsp;·&nbsp; ✦ Descuentos especiales en compras mayoristas &nbsp;·&nbsp; ✦ Stock sujeto a disponibilidad &nbsp;·&nbsp; ✦ Aceptamos todas las formas de pago
+  </div>
+
+  <div class="pf">
+    <span>Patitas Pet Shop — Catálogo 2025</span>
+    <span class="pf-hi">Sección 02 · Alimentos para Gatos</span>
+    <span>Página 3 / 5</span>
+  </div>
+</div>
+
+
+<!-- ==============================
+     PÁGINA 4 — BENEFICIOS
+============================== -->
+<div class="page">
+
+  <div class="ph">
+    <div class="ph-brand">
+      <div class="ph-dot">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="50" cy="68" rx="23" ry="18"/>
+          <ellipse cx="25" cy="46" rx="10.5" ry="13"/>
+          <ellipse cx="43" cy="36" rx="10.5" ry="13"/>
+          <ellipse cx="61" cy="36" rx="10.5" ry="13"/>
+          <ellipse cx="77" cy="46" rx="10.5" ry="13"/>
+        </svg>
+      </div>
+      <span class="ph-name">Patitas Pet Shop</span>
+    </div>
+    <div class="ph-contact">
+      📞 +54 11 1234-5678 &nbsp;·&nbsp; 📱 @patitaspetshop &nbsp;·&nbsp; 📍 Av. Siempreverde 1234, CABA
+    </div>
+  </div>
+
+  <div class="ben-inner">
+
+    <div class="ben-head">
+      <span class="over">¿Por qué elegirnos?</span>
+      <h2>Nuestros Beneficios</h2>
+      <p>En Patitas Pet Shop nos comprometemos a ofrecerte siempre lo mejor para tu mascota</p>
+      <div class="ben-rule"></div>
+    </div>
+
+    <div class="ben-grid">
+
+      <!-- Card 1 -->
+      <div class="ben-card bc1">
+        <div class="ben-icon bi1">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#F97316">
+            <path d="M12 2 L15.09 8.26 L22 9.27 L17 14.14 L18.18 21.02 L12 17.77 L5.82 21.02 L7 14.14 L2 9.27 L8.91 8.26 Z"/>
+          </svg>
+        </div>
+        <h3>Alimentos Premium</h3>
+        <p>Trabajamos exclusivamente con las marcas líderes del mercado. Royal Canin, Pro Plan, Excellent y más, garantizando calidad certificada en cada producto que ofrecemos.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="ben-card bc2">
+        <div class="ben-icon bi2">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#10B981">
+            <path d="M6.5 10h-2v7h2v-7zm6 0h-2v7h2v-7zm8.5 9H2v2h19v-2zm-2.5-9h-2v7h2v-7zM11.5 1L2 6v2h19V6l-9.5-5z"/>
+          </svg>
+        </div>
+        <h3>Nutrición Balanceada</h3>
+        <p>Asesoramiento profesional y personalizado para seleccionar el alimento ideal según la edad, raza, peso y necesidades específicas de tu compañero.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="ben-card bc3">
+        <div class="ben-icon bi3">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#3B82F6">
+            <path d="M20 8h-3V4H3C1.9 4 1 4.9 1 6v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h8c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zM18 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+          </svg>
+        </div>
+        <h3>Entrega a Domicilio</h3>
+        <p>Pedí por WhatsApp y recibí en el mismo día. Servicio de delivery rápido y seguro en toda la zona. Sin costo mínimo de pedido en productos seleccionados.</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="ben-card bc4">
+        <div class="ben-icon bi4">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#8B5CF6">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+        <h3>Atención Personalizada</h3>
+        <p>Nuestro equipo especializado te acompaña en cada compra. Respondemos todas tus consultas y te ayudamos a elegir lo mejor para tu familia peluda con amor y dedicación.</p>
+      </div>
+
+    </div>
+
+    <!-- Promo banner -->
+    <div class="promo-bar">
+      <div class="promo-bar-left">
+        <span class="over">Oferta Especial</span>
+        <h3>¡Comprá 2 bolsas y llevá la 3ra con 20% OFF!</h3>
+        <p>Válido para productos seleccionados · Consultá disponibilidad en tienda o WhatsApp</p>
+      </div>
+      <div class="promo-badge">
+        <div class="s1">AHORRÁ</div>
+        <div class="s2">20%</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="pf">
+    <span>Patitas Pet Shop — Catálogo 2025</span>
+    <span class="pf-hi">Sección 03 · Beneficios</span>
+    <span>Página 4 / 5</span>
+  </div>
+</div>
+
+
+<!-- ==============================
+     PÁGINA 5 — CONTACTO
+============================== -->
+<div class="page contact-page">
+  <div class="ct-top-bar"></div>
+
+  <div style="position:absolute;right:-70px;top:-70px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(249,115,22,0.09) 0%,transparent 70%);"></div>
+  <div style="position:absolute;left:-50px;bottom:100px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(59,130,246,0.08) 0%,transparent 70%);"></div>
+
+  <div class="ct-body">
+
+    <div class="ct-head">
+      <span class="over">✦ Estamos para vos ✦</span>
+      <h2>Contactanos</h2>
+      <p>Encontranos en todos nuestros canales de atención</p>
+      <div class="ct-rule"></div>
+    </div>
+
+    <div class="ct-grid">
+
+      <!-- WhatsApp -->
+      <div class="ct-card">
+        <div class="ct-icon ic-wa">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" fill="white"/>
+          </svg>
+        </div>
+        <div class="ct-info">
+          <div class="lbl">WhatsApp</div>
+          <div class="val">+54 11 1234-5678</div>
+          <div class="sub">Consultas · Pedidos · Asesoramiento</div>
+        </div>
+      </div>
+
+      <!-- Instagram -->
+      <div class="ct-card">
+        <div class="ct-icon ic-ig">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="white"/>
+          </svg>
+        </div>
+        <div class="ct-info">
+          <div class="lbl">Instagram</div>
+          <div class="val">@patitaspetshop</div>
+          <div class="sub">Seguinos para novedades y ofertas</div>
+        </div>
+      </div>
+
+      <!-- Dirección -->
+      <div class="ct-card">
+        <div class="ct-icon ic-loc">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="white"/>
+          </svg>
+        </div>
+        <div class="ct-info">
+          <div class="lbl">Dirección</div>
+          <div class="val">Av. Siempreverde 1234</div>
+          <div class="sub">Buenos Aires, Argentina · Local 5</div>
+        </div>
+      </div>
+
+      <!-- Horarios -->
+      <div class="ct-card">
+        <div class="ct-icon ic-clk">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5z" fill="white"/>
+          </svg>
+        </div>
+        <div class="ct-info">
+          <div class="lbl">Horarios de Atención</div>
+          <div class="val">Lun – Sáb: 9:00 a 19:30 hs</div>
+          <div class="sub">Domingos y feriados: 10:00 a 14:00 hs</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Separador -->
+    <div style="width:100%;height:1px;background:rgba(255,255,255,0.1);margin:10px 0 26px;"></div>
+
+    <!-- Logo y cierre -->
+    <div class="ct-logo-wrap">
+      <div class="ct-logo-row">
+        <div class="ct-logo-circle">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="50" cy="68" rx="23" ry="18" fill="white"/>
+            <ellipse cx="25" cy="46" rx="10.5" ry="13" fill="white"/>
+            <ellipse cx="43" cy="36" rx="10.5" ry="13" fill="white"/>
+            <ellipse cx="61" cy="36" rx="10.5" ry="13" fill="white"/>
+            <ellipse cx="77" cy="46" rx="10.5" ry="13" fill="white"/>
+          </svg>
+        </div>
+        <span class="ct-logo-name">Patitas Pet Shop</span>
+      </div>
+      <p class="ct-tagline">"Porque tu mascota se merece lo mejor"</p>
+    </div>
+
+  </div>
+
+  <div class="ct-bottom-bar"></div>
+</div>
+
+</body>
+</html>
