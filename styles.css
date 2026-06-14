@@ -447,8 +447,25 @@ button { cursor: pointer; border: none; background: none; }
 .product-card__img {
   width: 100%; height: 100%;
   object-fit: cover;
+  object-position: center center;
   transition: transform .5s ease;
 }
+/* Centra el sujeto en cards con animales de cuerpo entero */
+.product-card__img[alt*="Cama"],
+.product-card__img[alt*="Rascador"] {
+  object-position: center 30%;
+}
+/* Cat face cards — centre-top framing */
+.product-card__img[alt*="Piedras"],
+.product-card__img[alt*="Gatos"] {
+  object-position: center 20%;
+}
+/* Category card images */
+.cat-card__img-wrap img {
+  object-position: center center;
+}
+.cat-card[href*="camas"] .cat-card__img-wrap img  { object-position: center 30%; }
+.cat-card[href*="correas"] .cat-card__img-wrap img { object-position: center 40%; }
 .product-card:hover .product-card__img { transform: scale(1.06); }
 .product-card__badge {
   position: absolute;
