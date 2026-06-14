@@ -212,7 +212,7 @@ button { cursor: pointer; border: none; background: none; }
   gap: .55rem;
   text-decoration: none;
 }
-.nav__logo-paw { font-size: 1.7rem; }
+.nav__logo-paw { display: flex; align-items: center; color: var(--green-mid); }
 .nav__logo-text { display: flex; flex-direction: column; line-height: 1.1; }
 .nav__logo-name {
   font-family: var(--font-display);
@@ -413,7 +413,7 @@ button { cursor: pointer; border: none; background: none; }
   transition: var(--transition);
 }
 .benefit:hover { background: var(--green-pale2); }
-.benefit__icon { font-size: 2rem; flex-shrink: 0; }
+.benefit__icon { display: flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; border-radius: 50%; background: var(--green-pale); color: var(--green); flex-shrink: 0; }
 .benefit__title { font-size: .95rem; font-weight: 700; margin-bottom: .15rem; color: var(--text); }
 .benefit__text  { font-size: .82rem; color: var(--text-light); }
 
@@ -562,7 +562,7 @@ button { cursor: pointer; border: none; background: none; }
   align-items: center;
   gap: .65rem;
 }
-.cat-card__icon { font-size: 1.6rem; }
+.cat-card__icon { display: flex; align-items: center; justify-content: center; width: 2.8rem; height: 2.8rem; border-radius: 50%; background: rgba(255,255,255,.2); backdrop-filter: blur(4px); color: #fff; }
 .cat-card__content h3 { font-size: 1rem; font-weight: 700; }
 
 /* ============================================================
@@ -748,7 +748,7 @@ button { cursor: pointer; border: none; background: none; }
   display: flex; align-items: center; gap: .65rem;
   font-size: .92rem; font-weight: 500; color: var(--text);
 }
-.about__feature-icon { font-size: 1rem; }
+.about__feature-icon { display: flex; align-items: center; color: var(--green-mid); flex-shrink: 0; }
 
 /* ============================================================
    CTA BANNER
@@ -820,7 +820,7 @@ button { cursor: pointer; border: none; background: none; }
 .footer__links a:hover { color: var(--green-light); padding-left: .3rem; }
 .footer__contact { display: flex; flex-direction: column; gap: .9rem; }
 .footer__contact li { display: flex; align-items: flex-start; gap: .65rem; font-size: .87rem; }
-.footer__contact-icon { font-size: 1rem; flex-shrink: 0; margin-top: .05rem; }
+.footer__contact-icon { display: flex; align-items: center; color: var(--green-light); flex-shrink: 0; margin-top: .1rem; }
 .footer__contact a { color: rgba(255,255,255,.6); transition: var(--transition); }
 .footer__contact a:hover { color: var(--green-light); }
 .footer__bottom {

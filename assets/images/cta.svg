@@ -1,26 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%"   style="stop-color:#062413;stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:#0a5c35;stop-opacity:1"/>
+      <stop offset="0%" style="stop-color:#020d06"/>
+      <stop offset="100%" style="stop-color:#052412"/>
     </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="45%" r="55%">
-      <stop offset="0%"   style="stop-color:rgba(255,255,255,0.15);stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:rgba(255,255,255,0);stop-opacity:1"/>
-    </radialGradient>
   </defs>
-  <rect width="800" height="600" fill="url(#bg)"/>
-  <!-- Decorative circles -->
-  <circle cx="96" cy="90" r="48" fill="rgba(255,255,255,0.08)"/>
-  <circle cx="704" cy="510" r="72" fill="rgba(255,255,255,0.08)"/>
-  <circle cx="680" cy="72" r="36" fill="rgba(255,255,255,0.06)"/>
-  <circle cx="120" cy="510" r="54" fill="rgba(255,255,255,0.06)"/>
-  <circle cx="400" cy="300" r="150" fill="rgba(255,255,255,0.05)"/>
-  <!-- Glow -->
-  <ellipse cx="400" cy="300" rx="400" ry="300" fill="url(#glow)"/>
-  <!-- Emoji -->
-  <text x="400" y="264" text-anchor="middle" dominant-baseline="middle" font-size="132" font-family="Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif">🐾</text>
-  <!-- Label -->
-  <text x="400" y="435" text-anchor="middle" font-size="39" font-weight="700" font-family="Poppins,Arial,sans-serif" fill="white" opacity="0.95">Consultános</text>
-  <text x="400" y="501" text-anchor="middle" font-size="25" font-weight="400" font-family="Poppins,Arial,sans-serif" fill="rgba(255,255,255,0.82)">por WhatsApp</text>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <!-- subtle paw pattern -->
+  <g fill="rgba(255,255,255,0.03)">
+    <ellipse cx="200" cy="300" rx="62" ry="50"/>
+    <circle cx="138" cy="238" r="23"/>
+    <circle cx="163" cy="218" r="23"/>
+    <circle cx="196" cy="212" r="23"/>
+    <circle cx="230" cy="220" r="23"/>
+    <circle cx="254" cy="244" r="23"/>
+    <ellipse cx="900" cy="400" rx="56" ry="45"/>
+    <circle cx="842" cy="344" r="21"/>
+    <circle cx="864" cy="326" r="21"/>
+    <circle cx="896" cy="320" r="21"/>
+    <circle cx="927" cy="328" r="21"/>
+    <circle cx="950" cy="352" r="21"/>
+  </g>
+  <circle cx="600" cy="300" r="200" fill="rgba(37,211,102,0.04)"/>
+  <circle cx="600" cy="300" r="320" fill="rgba(37,211,102,0.02)"/>
 </svg>

@@ -1,26 +1,42 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%"   style="stop-color:#8B3A0A;stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:#e67e22;stop-opacity:1"/>
+      <stop offset="0%" style="stop-color:#6B2A0A"/><stop offset="100%" style="stop-color:#D4520A"/>
     </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="45%" r="55%">
-      <stop offset="0%"   style="stop-color:rgba(255,255,255,0.15);stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:rgba(255,255,255,0);stop-opacity:1"/>
-    </radialGradient>
   </defs>
   <rect width="800" height="600" fill="url(#bg)"/>
-  <!-- Decorative circles -->
-  <circle cx="96" cy="90" r="48" fill="rgba(255,255,255,0.08)"/>
-  <circle cx="704" cy="510" r="72" fill="rgba(255,255,255,0.08)"/>
-  <circle cx="680" cy="72" r="36" fill="rgba(255,255,255,0.06)"/>
-  <circle cx="120" cy="510" r="54" fill="rgba(255,255,255,0.06)"/>
-  <circle cx="400" cy="300" r="150" fill="rgba(255,255,255,0.05)"/>
-  <!-- Glow -->
-  <ellipse cx="400" cy="300" rx="400" ry="300" fill="url(#glow)"/>
-  <!-- Emoji -->
-  <text x="400" y="264" text-anchor="middle" dominant-baseline="middle" font-size="132" font-family="Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif">🐈</text>
-  <!-- Label -->
-  <text x="400" y="435" text-anchor="middle" font-size="39" font-weight="700" font-family="Poppins,Arial,sans-serif" fill="white" opacity="0.95">Rascador para Gatos</text>
-  <text x="400" y="501" text-anchor="middle" font-size="25" font-weight="400" font-family="Poppins,Arial,sans-serif" fill="rgba(255,255,255,0.82)">Torre Sisal 120 cm</text>
+  <ellipse cx="400" cy="310" rx="360" ry="280" fill="rgba(255,255,255,0.03)"/>
+  <!-- shadow -->
+  <ellipse cx="400" cy="530" rx="155" ry="17" fill="rgba(0,0,0,0.2)"/>
+  <!-- base platform -->
+  <rect x="260" y="490" width="280" height="28" rx="9" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+  <!-- lower platform -->
+  <rect x="250" y="415" width="300" height="28" rx="9" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/>
+  <!-- mid platform -->
+  <rect x="275" y="290" width="250" height="28" rx="9" fill="rgba(255,255,255,0.22)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+  <!-- top platform / house -->
+  <rect x="250" y="88" width="300" height="36" rx="10" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+  <!-- house walls -->
+  <rect x="285" y="88" width="230" height="100" rx="0" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.22)" stroke-width="1"/>
+  <!-- house roof -->
+  <polygon points="280,88 520,88 400,40" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/>
+  <!-- main post -->
+  <rect x="365" y="118" width="70" height="380" rx="12" fill="rgba(255,255,255,0.14)" stroke="rgba(255,255,255,0.22)" stroke-width="1.5"/>
+  <!-- sisal texture -->
+  <g stroke="rgba(255,255,255,0.07)" stroke-width="2">
+    <line x1="378" y1="120" x2="378" y2="498"/>
+    <line x1="390" y1="120" x2="390" y2="498"/>
+    <line x1="402" y1="120" x2="402" y2="498"/>
+    <line x1="414" y1="120" x2="414" y2="498"/>
+    <line x1="424" y1="120" x2="424" y2="498"/>
+  </g>
+  <!-- cat silhouette on top house -->
+  <g fill="rgba(255,255,255,0.65)" transform="translate(346,28)">
+    <ellipse cx="54" cy="20" rx="24" ry="20"/>
+    <circle cx="54" cy="-7" r="15"/>
+    <polygon points="40,-20 46,-34 52,-20"/>
+    <polygon points="56,-20 62,-34 68,-20"/>
+  </g>
+  <!-- label -->
+  <text x="400" y="570" text-anchor="middle" font-size="18" font-weight="700" font-family="Poppins,Arial,sans-serif" fill="rgba(255,255,255,0.88)">Rascador Torre Sisal · 120 cm</text>
 </svg>

@@ -1,26 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="700" viewBox="0 0 800 700">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%"   style="stop-color:#0a3d1f;stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:#0d6e3f;stop-opacity:1"/>
+      <stop offset="0%" style="stop-color:#031209"/>
+      <stop offset="100%" style="stop-color:#0d6e3f"/>
     </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="45%" r="55%">
-      <stop offset="0%"   style="stop-color:rgba(255,255,255,0.15);stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:rgba(255,255,255,0);stop-opacity:1"/>
-    </radialGradient>
   </defs>
-  <rect width="800" height="600" fill="url(#bg)"/>
-  <!-- Decorative circles -->
-  <circle cx="96" cy="90" r="48" fill="rgba(255,255,255,0.08)"/>
-  <circle cx="704" cy="510" r="72" fill="rgba(255,255,255,0.08)"/>
-  <circle cx="680" cy="72" r="36" fill="rgba(255,255,255,0.06)"/>
-  <circle cx="120" cy="510" r="54" fill="rgba(255,255,255,0.06)"/>
-  <circle cx="400" cy="300" r="150" fill="rgba(255,255,255,0.05)"/>
-  <!-- Glow -->
-  <ellipse cx="400" cy="300" rx="400" ry="300" fill="url(#glow)"/>
-  <!-- Emoji -->
-  <text x="400" y="264" text-anchor="middle" dominant-baseline="middle" font-size="132" font-family="Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif">🐾</text>
-  <!-- Label -->
-  <text x="400" y="435" text-anchor="middle" font-size="39" font-weight="700" font-family="Poppins,Arial,sans-serif" fill="white" opacity="0.95">Patitas Pet Shop</text>
-  <text x="400" y="501" text-anchor="middle" font-size="25" font-weight="400" font-family="Poppins,Arial,sans-serif" fill="rgba(255,255,255,0.82)">+8 años de experiencia</text>
+  <rect width="800" height="700" fill="url(#bg)"/>
+  <!-- shelf lines -->
+  <g stroke="rgba(255,255,255,0.10)" stroke-width="2.5" fill="none">
+    <line x1="70" y1="200" x2="730" y2="200"/>
+    <line x1="70" y1="330" x2="730" y2="330"/>
+    <line x1="70" y1="460" x2="730" y2="460"/>
+    <line x1="245" y1="178" x2="245" y2="480"/>
+    <line x1="420" y1="178" x2="420" y2="480"/>
+    <line x1="595" y1="178" x2="595" y2="480"/>
+    <line x1="70"  y1="570" x2="730" y2="570"/>
+  </g>
+  <!-- product silhouettes on shelves -->
+  <g fill="rgba(255,255,255,0.09)" stroke="rgba(255,255,255,0.16)" stroke-width="1">
+    <rect x="88"  y="144" width="72" height="56" rx="5"/>
+    <rect x="172" y="148" width="58" height="52" rx="5"/>
+    <rect x="264" y="142" width="82" height="58" rx="5"/>
+    <rect x="358" y="147" width="52" height="53" rx="5"/>
+    <rect x="438" y="144" width="72" height="56" rx="5"/>
+    <rect x="522" y="148" width="62" height="52" rx="5"/>
+    <rect x="614" y="142" width="78" height="58" rx="5"/>
+    <rect x="84"  y="274" width="66" height="56" rx="5"/>
+    <rect x="162" y="278" width="72" height="52" rx="5"/>
+    <rect x="260" y="270" width="78" height="60" rx="5"/>
+    <rect x="352" y="275" width="56" height="55" rx="5"/>
+    <rect x="432" y="272" width="82" height="58" rx="5"/>
+    <rect x="526" y="278" width="52" height="52" rx="5"/>
+    <rect x="608" y="270" width="72" height="60" rx="5"/>
+  </g>
+  <!-- paw logo centre -->
+  <g fill="rgba(255,255,255,0.12)" transform="translate(282,470)">
+    <ellipse cx="118" cy="96" rx="72" ry="58"/>
+    <circle cx="32"  cy="40" r="27"/>
+    <circle cx="72"  cy="14" r="27"/>
+    <circle cx="118" cy="8"  r="27"/>
+    <circle cx="163" cy="14" r="27"/>
+    <circle cx="200" cy="42" r="27"/>
+  </g>
+  <text x="400" y="624" text-anchor="middle" font-size="22" font-weight="700" font-family="Poppins,Arial,sans-serif" fill="rgba(255,255,255,0.68)">Patitas Pet Shop</text>
+  <text x="400" y="652" text-anchor="middle" font-size="15" font-weight="400" font-family="Poppins,Arial,sans-serif" fill="rgba(255,255,255,0.40)">+8 años de experiencia</text>
 </svg>

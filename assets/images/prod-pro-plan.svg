@@ -1,26 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%"   style="stop-color:#1a4a6e;stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1"/>
+      <stop offset="0%" style="stop-color:#0d2e4a"/>
+      <stop offset="100%" style="stop-color:#1a6896"/>
     </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="45%" r="55%">
-      <stop offset="0%"   style="stop-color:rgba(255,255,255,0.15);stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:rgba(255,255,255,0);stop-opacity:1"/>
-    </radialGradient>
+    <linearGradient id="bag" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(255,255,255,0.28)"/>
+      <stop offset="100%" style="stop-color:rgba(255,255,255,0.09)"/>
+    </linearGradient>
   </defs>
   <rect width="800" height="600" fill="url(#bg)"/>
-  <!-- Decorative circles -->
-  <circle cx="96" cy="90" r="48" fill="rgba(255,255,255,0.08)"/>
-  <circle cx="704" cy="510" r="72" fill="rgba(255,255,255,0.08)"/>
-  <circle cx="680" cy="72" r="36" fill="rgba(255,255,255,0.06)"/>
-  <circle cx="120" cy="510" r="54" fill="rgba(255,255,255,0.06)"/>
-  <circle cx="400" cy="300" r="150" fill="rgba(255,255,255,0.05)"/>
-  <!-- Glow -->
-  <ellipse cx="400" cy="300" rx="400" ry="300" fill="url(#glow)"/>
-  <!-- Emoji -->
-  <text x="400" y="264" text-anchor="middle" dominant-baseline="middle" font-size="132" font-family="Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif">🐕</text>
-  <!-- Label -->
-  <text x="400" y="435" text-anchor="middle" font-size="39" font-weight="700" font-family="Poppins,Arial,sans-serif" fill="white" opacity="0.95">Pro Plan Adulto</text>
-  <text x="400" y="501" text-anchor="middle" font-size="25" font-weight="400" font-family="Poppins,Arial,sans-serif" fill="rgba(255,255,255,0.82)">Alimento Premium 15 kg</text>
+  <!-- ambient glow -->
+  <ellipse cx="400" cy="300" rx="440" ry="330" fill="rgba(255,255,255,0.04)"/>
+  <!-- shadow -->
+  <ellipse cx="400" cy="534" rx="190" ry="18" fill="rgba(0,0,0,0.18)"/>
+  <!-- bag body -->
+  <rect x="216" y="132" width="368" height="372" rx="20" fill="url(#bag)" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/>
+  <!-- top fold -->
+  <path d="M240 132 L560 132 L528 60 L272 60 Z" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+  <!-- colour band -->
+  <rect x="216" y="276" width="368" height="96" fill="rgba(22,92,138,0.90)" opacity="0.88"/>
+  <!-- paw on band -->
+  <g transform="translate(264,321)" fill="rgba(255,255,255,0.30)">
+    <ellipse cx="0" cy="9" rx="13" ry="11"/>
+    <circle cx="-15" cy="-2" r="6"/>
+    <circle cx="-6" cy="-11" r="6"/>
+    <circle cx="6" cy="-11" r="6"/>
+    <circle cx="15" cy="-2" r="6"/>
+  </g>
+  <!-- brand text -->
+  <text x="400" y="327" text-anchor="middle" font-size="30" font-weight="800" font-family="Poppins,Arial,sans-serif" fill="white">PRO PLAN</text>
+  <!-- product line -->
+  <text x="400" y="346" text-anchor="middle" font-size="15" font-weight="500" font-family="Poppins,Arial,sans-serif" fill="rgba(255,255,255,0.82)">Adulto · Performance</text>
+  <!-- weight tag -->
+  <rect x="336" y="456" width="128" height="30" rx="15" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.38)" stroke-width="1.5"/>
+  <text x="400" y="480" text-anchor="middle" font-size="14" font-weight="600" font-family="Poppins,Arial,sans-serif" fill="white">15 kg</text>
 </svg>

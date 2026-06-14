@@ -1,26 +1,42 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%"   style="stop-color:#5b2680;stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:#9b59b6;stop-opacity:1"/>
+      <stop offset="0%" style="stop-color:#4a1570"/><stop offset="100%" style="stop-color:#8e44ad"/>
     </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="45%" r="55%">
-      <stop offset="0%"   style="stop-color:rgba(255,255,255,0.15);stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:rgba(255,255,255,0);stop-opacity:1"/>
-    </radialGradient>
   </defs>
   <rect width="800" height="600" fill="url(#bg)"/>
-  <!-- Decorative circles -->
-  <circle cx="96" cy="90" r="48" fill="rgba(255,255,255,0.08)"/>
-  <circle cx="704" cy="510" r="72" fill="rgba(255,255,255,0.08)"/>
-  <circle cx="680" cy="72" r="36" fill="rgba(255,255,255,0.06)"/>
-  <circle cx="120" cy="510" r="54" fill="rgba(255,255,255,0.06)"/>
-  <circle cx="400" cy="300" r="150" fill="rgba(255,255,255,0.05)"/>
-  <!-- Glow -->
-  <ellipse cx="400" cy="300" rx="400" ry="300" fill="url(#glow)"/>
-  <!-- Emoji -->
-  <text x="400" y="264" text-anchor="middle" dominant-baseline="middle" font-size="132" font-family="Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif">🐱</text>
-  <!-- Label -->
-  <text x="400" y="435" text-anchor="middle" font-size="39" font-weight="700" font-family="Poppins,Arial,sans-serif" fill="white" opacity="0.95">Piedras Sanitarias</text>
-  <text x="400" y="501" text-anchor="middle" font-size="25" font-weight="400" font-family="Poppins,Arial,sans-serif" fill="rgba(255,255,255,0.82)">Premium 4 kg</text>
+  <ellipse cx="400" cy="310" rx="360" ry="280" fill="rgba(255,255,255,0.03)"/>
+  <!-- litter tray -->
+  <path d="M148 310 L198 472 L602 472 L652 310 Z" fill="rgba(255,255,255,0.14)" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+  <!-- tray rim -->
+  <rect x="138" y="292" width="524" height="28" rx="9" fill="rgba(255,255,255,0.22)" stroke="rgba(255,255,255,0.32)" stroke-width="1.5"/>
+  <!-- litter granules -->
+  <g fill="rgba(255,255,255,0.45)">
+    <ellipse cx="240" cy="386" rx="20" ry="13" transform="rotate(12,240,386)"/>
+    <ellipse cx="295" cy="418" rx="16" ry="10" transform="rotate(-8,295,418)"/>
+    <ellipse cx="348" cy="374" rx="22" ry="14" transform="rotate(5,348,374)"/>
+    <ellipse cx="408" cy="402" rx="18" ry="11" transform="rotate(-16,408,402)"/>
+    <ellipse cx="462" cy="382" rx="17" ry="11" transform="rotate(10,462,382)"/>
+    <ellipse cx="516" cy="422" rx="20" ry="12" transform="rotate(-4,516,422)"/>
+    <ellipse cx="270" cy="440" rx="14" ry="9" transform="rotate(8,270,440)"/>
+    <ellipse cx="380" cy="448" rx="18" ry="10" transform="rotate(-12,380,448)"/>
+    <ellipse cx="444" cy="440" rx="15" ry="9" transform="rotate(18,444,440)"/>
+    <ellipse cx="325" cy="398" rx="12" ry="8" transform="rotate(-6,325,398)"/>
+    <ellipse cx="490" cy="404" rx="16" ry="10" transform="rotate(9,490,404)"/>
+    <ellipse cx="554" cy="418" rx="14" ry="9" transform="rotate(-11,554,418)"/>
+    <ellipse cx="210" cy="420" rx="12" ry="8" transform="rotate(14,210,420)"/>
+    <ellipse cx="575" cy="390" rx="13" ry="8" transform="rotate(-7,575,390)"/>
+  </g>
+  <!-- product badge -->
+  <rect x="272" y="166" width="256" height="100" rx="18" fill="rgba(255,255,255,0.16)" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/>
+  <text x="400" y="210" text-anchor="middle" font-size="24" font-weight="800" font-family="Poppins,Arial,sans-serif" fill="white">Piedras Sanitarias</text>
+  <text x="400" y="238" text-anchor="middle" font-size="14" font-weight="500" font-family="Poppins,Arial,sans-serif" fill="rgba(255,255,255,0.78)">Premium · Control de Olores · 4 kg</text>
+  <!-- cat silhouette peeking -->
+  <g fill="rgba(255,255,255,0.22)" transform="translate(540,290)">
+    <circle cx="60" cy="0" r="38"/>
+    <polygon points="38,-38 46,-60 54,-38"/>
+    <polygon points="66,-38 74,-60 82,-38"/>
+    <ellipse cx="44" cy="8" rx="8" ry="5"/>
+    <ellipse cx="76" cy="8" rx="8" ry="5"/>
+  </g>
 </svg>

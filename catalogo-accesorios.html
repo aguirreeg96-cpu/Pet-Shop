@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Accesorios y Cuidado — Patitas Pet Shop 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    @page { size: A4 portrait; margin: 0; }
+
+    :root {
+      /* brand */
+      --orange:        #F97316;
+      --orange-dark:   #C2550A;
+      --orange-light:  #FED7AA;
+      --navy:          #1E3A5F;
+      --navy-light:    #2D5282;
+      --cream:         #FFF7ED;
+      --warm-gray:     #F9F5F0;
+      --text-dark:     #1A1A2E;
+      --text-muted:    #6B7280;
+      --border:        #E5E7EB;
+
+      /* section 1 — juguetes */
+      --amb:       #F59E0B;
+      --amb-dark:  #92400E;
+      --amb-bg:    #FFFBEB;
+      --amb-bg2:   #FEF3C7;
+
+      /* section 2 — camas */
+      --pur:       #8B5CF6;
+      --pur-dark:  #4C1D95;
+      --pur-bg:    #F5F3FF;
+      --pur-bg2:   #EDE9FE;
+
+      /* section 3 — correas */
+      --grn:       #10B981;
+      --grn-dark:  #064E3B;
+      --grn-bg:    #ECFDF5;
+      --grn-bg2:   #D1FAE5;
+
+      /* section 4 — higiene */
+      --cyn:       #06B6D4;
+      --cyn-dark:  #0E4F5C;
+      --cyn-bg:    #ECFEFF;
+      --cyn-bg2:   #CFFAFE;
+    }
+
+    body {
+      font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+      background: #DCDCDC;
+      color: var(--text-dark);
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto 18px;
+      background: #fff;
+      position: relative;
+      overflow: hidden;
+      page-break-after: always;
+      break-after: page;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    }
+
+    @media print {
+      body { background: none; }
+      .page { margin: 0; box-shadow: none; }
+    }
+
+    /* ================================
+       COVER
+    ================================ */
+    .cover-page {
+      background: linear-gradient(155deg, #0F2540 0%, #1E3A5F 45%, #162842 100%);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      min-height: 297mm;
+    }
+    .cover-accent-top {
+      position: absolute; top: 0; left: 0; right: 0; height: 7px;
+      background: linear-gradient(90deg, var(--orange-dark), #FBB040, var(--orange-dark));
+    }
+    .cover-accent-bottom {
+      position: absolute; bottom: 0; left: 0; right: 0; height: 7px;
+      background: linear-gradient(90deg, var(--orange-dark), #FBB040, var(--orange-dark));
+    }
+    .cover-orb-1 {
+      position: absolute; top: -90px; left: -90px;
+      width: 380px; height: 380px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(249,115,22,0.12) 0%, transparent 70%);
+    }
+    .cover-orb-2 {
+      position: absolute; bottom: 60px; right: -80px;
+      width: 320px; height: 320px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(139,92,246,0.10) 0%, transparent 70%);
+    }
+    .cover-orb-3 {
+      position: absolute; bottom: -60px; left: 40px;
+      width: 200px; height: 200px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(16,185,129,0.08) 0%, transparent 70%);
+    }
+    .cover-body {
+      display: flex; flex-direction: column;
+      align-items: center; text-align: center;
+      z-index: 2; padding: 20px 50px;
+    }
+    .cover-logo-ring {
+      width: 130px; height: 130px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), #FBB040);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 26px;
+      box-shadow: 0 0 0 10px rgba(249,115,22,0.12), 0 20px 60px rgba(249,115,22,0.35);
+    }
+    .cover-logo-ring svg { width: 75px; height: 75px; fill: white; }
+    .cover-eyebrow {
+      font-size: 10.5px; font-weight: 700; letter-spacing: 5px;
+      text-transform: uppercase; color: var(--orange); margin-bottom: 10px;
+    }
+    .cover-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 58px; font-weight: 700; line-height: 1.0; color: #fff; margin-bottom: 4px;
+    }
+    .cover-title span { color: var(--orange); }
+    .cover-rule {
+      width: 70px; height: 2px; margin: 22px auto;
+      background: linear-gradient(90deg, transparent, var(--orange), transparent);
+    }
+    .cover-catalog-name {
+      font-size: 18px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 2px; color: #fff; margin-bottom: 10px;
+    }
+    .cover-catalog-sub {
+      font-size: 14px; font-weight: 300;
+      color: rgba(255,255,255,0.65); letter-spacing: 0.5px; margin-bottom: 40px;
+    }
+    /* Cover icon grid 2x2 */
+    .cover-icons-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 18px;
+      margin-bottom: 38px;
+    }
+    .cover-icon-card {
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 16px; padding: 18px 24px; min-width: 130px;
+    }
+    .cover-icon-circle {
+      width: 56px; height: 56px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .cover-icon-circle svg { width: 30px; height: 30px; fill: white; }
+    .cic-1 { background: linear-gradient(135deg, #F59E0B, #FBBF24); }
+    .cic-2 { background: linear-gradient(135deg, #8B5CF6, #A78BFA); }
+    .cic-3 { background: linear-gradient(135deg, #10B981, #34D399); }
+    .cic-4 { background: linear-gradient(135deg, #06B6D4, #22D3EE); }
+    .cover-icon-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.5px;
+      color: rgba(255,255,255,0.85); text-align: center;
+    }
+    .cover-pill {
+      background: rgba(249,115,22,0.14);
+      border: 1px solid rgba(249,115,22,0.35);
+      border-radius: 30px; padding: 8px 28px;
+      font-size: 11px; font-weight: 700; color: var(--orange-light);
+      letter-spacing: 3px; text-transform: uppercase;
+    }
+    .cover-footer-note {
+      position: absolute; bottom: 22px; left: 0; right: 0;
+      text-align: center; font-size: 10px;
+      color: rgba(255,255,255,0.35); letter-spacing: 0.8px;
+    }
+
+    /* ================================
+       PAGE HEADER & FOOTER (shared)
+    ================================ */
+    .ph {
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      padding: 15px 32px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .ph-brand { display: flex; align-items: center; gap: 10px; }
+    .ph-dot {
+      width: 34px; height: 34px; border-radius: 50%; background: var(--orange);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .ph-dot svg { width: 19px; height: 19px; fill: white; }
+    .ph-name { font-size: 15px; font-weight: 700; color: #fff; }
+    .ph-contact { font-size: 9.5px; color: rgba(255,255,255,0.65); text-align: right; line-height: 1.9; }
+
+    .pf {
+      background: var(--navy); padding: 11px 32px;
+      display: flex; align-items: center; justify-content: space-between;
+      position: absolute; bottom: 0; left: 0; right: 0;
+    }
+    .pf span { font-size: 9px; color: rgba(255,255,255,0.45); }
+    .pf .pf-hi { font-weight: 700; }
+
+    /* ================================
+       SECTION BANNER
+    ================================ */
+    .sec-banner {
+      padding: 18px 32px;
+      display: flex; align-items: center; gap: 18px;
+    }
+    .sb-toys  { background: linear-gradient(135deg, var(--amb-bg), var(--amb-bg2)); border-bottom: 3px solid var(--amb); }
+    .sb-beds  { background: linear-gradient(135deg, var(--pur-bg), var(--pur-bg2)); border-bottom: 3px solid var(--pur); }
+    .sb-leads { background: linear-gradient(135deg, var(--grn-bg), var(--grn-bg2)); border-bottom: 3px solid var(--grn); }
+    .sb-hygn  { background: linear-gradient(135deg, var(--cyn-bg), var(--cyn-bg2)); border-bottom: 3px solid var(--cyn); }
+
+    .sec-icon {
+      width: 54px; height: 54px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .si-toys  { background: var(--amb); }
+    .si-beds  { background: var(--pur); }
+    .si-leads { background: var(--grn); }
+    .si-hygn  { background: var(--cyn); }
+    .sec-icon svg { width: 30px; height: 30px; fill: white; }
+
+    .sec-text h2 { font-size: 21px; font-weight: 800; }
+    .st-toys  { color: var(--amb-dark); }
+    .st-beds  { color: var(--pur-dark); }
+    .st-leads { color: var(--grn-dark); }
+    .st-hygn  { color: var(--cyn-dark); }
+    .sec-text p { font-size: 11px; color: var(--text-muted); margin-top: 3px; font-weight: 500; }
+
+    .sec-badge {
+      margin-left: auto; padding: 6px 16px; border-radius: 20px;
+      font-size: 10px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: white;
+    }
+    .sbg-toys  { background: var(--amb); }
+    .sbg-beds  { background: var(--pur); }
+    .sbg-leads { background: var(--grn); }
+    .sbg-hygn  { background: var(--cyn); }
+
+    /* ================================
+       TABLE
+    ================================ */
+    .tbl-wrap { padding: 14px 32px; }
+
+    table { width: 100%; border-collapse: collapse; font-size: 12px; }
+
+    thead th {
+      padding: 11px 14px; text-align: left;
+      font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: white;
+    }
+    thead th:last-child { text-align: right; }
+
+    .th-toys  { background: var(--amb-dark); }
+    .th-beds  { background: var(--pur-dark); }
+    .th-leads { background: var(--grn-dark); }
+    .th-hygn  { background: var(--cyn-dark); }
+
+    tbody tr { border-bottom: 1px solid var(--border); }
+    tbody tr:nth-child(even) { background: var(--warm-gray); }
+    tbody td { padding: 9px 14px; vertical-align: middle; }
+    tbody td:last-child { text-align: right; }
+
+    .b { font-weight: 700; }
+
+    /* brand colors */
+    .br-kong     { color: #B45309; }
+    .br-zeedog   { color: #7C3AED; }
+    .br-petzone  { color: #1D4ED8; }
+    .br-gen      { color: #374151; }
+    .br-karlie   { color: #9D174D; }
+    .br-ortopet  { color: #5B21B6; }
+    .br-pethouse { color: #1E40AF; }
+    .br-flexi    { color: #065F46; }
+    .br-hunter   { color: #14532D; }
+    .br-ruffwear { color: #B45309; }
+    .br-banhu    { color: #0E7490; }
+    .br-fur      { color: #991B1B; }
+    .br-vets     { color: #1D4ED8; }
+    .br-petigree { color: #6D28D9; }
+
+    .prod { font-weight: 500; }
+
+    .badge-pres {
+      display: inline-block; background: var(--border);
+      color: var(--text-muted); padding: 2px 10px;
+      border-radius: 12px; font-size: 11px; font-weight: 600;
+    }
+
+    .price { font-weight: 800; font-size: 13.5px; white-space: nowrap; }
+    .pr-toys  { color: var(--amb-dark); }
+    .pr-beds  { color: var(--pur-dark); }
+    .pr-leads { color: var(--grn-dark); }
+    .pr-hygn  { color: var(--cyn-dark); }
+
+    .tbl-note {
+      padding: 8px 32px 55px;
+      font-size: 9px; color: var(--text-muted);
+      border-top: 1px solid var(--border); line-height: 1.8;
+    }
+    .sec-note {
+      padding: 6px 32px 0;
+      font-size: 10px; color: var(--text-muted); font-style: italic;
+    }
+
+    /* ================================
+       CONTACT PAGE
+    ================================ */
+    .contact-page {
+      background: linear-gradient(155deg, #0F2540 0%, #1E3A5F 50%, #162842 100%);
+      min-height: 297mm; display: flex; flex-direction: column;
+    }
+    .ct-top-bar {
+      height: 7px;
+      background: linear-gradient(90deg, var(--orange-dark), #FBB040, var(--orange-dark));
+    }
+    .ct-body {
+      flex: 1; padding: 38px 48px;
+      display: flex; flex-direction: column; align-items: center;
+    }
+    .ct-head { text-align: center; margin-bottom: 38px; }
+    .ct-head .over {
+      font-size: 10px; font-weight: 700; letter-spacing: 4px;
+      text-transform: uppercase; color: var(--orange);
+      display: block; margin-bottom: 8px;
+    }
+    .ct-head h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 38px; font-weight: 700; color: #fff; margin-bottom: 8px;
+    }
+    .ct-head p { font-size: 13px; color: rgba(255,255,255,0.55); }
+    .ct-rule { width: 55px; height: 2px; background: var(--orange); margin: 14px auto 0; }
+
+    .ct-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; width: 100%; margin-bottom: 30px; }
+
+    .ct-card {
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.11);
+      border-radius: 16px; padding: 22px 20px;
+      display: flex; align-items: flex-start; gap: 16px;
+    }
+    .ct-icon {
+      width: 48px; height: 48px; border-radius: 13px;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .ic-wa  { background: #25D366; }
+    .ic-ig  { background: linear-gradient(135deg, #FD1D1D, #E1306C, #833AB4); }
+    .ic-loc { background: var(--orange); }
+    .ic-clk { background: #3B82F6; }
+    .ct-icon svg { width: 25px; height: 25px; fill: white; }
+
+    .ct-info .lbl {
+      font-size: 9px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: rgba(255,255,255,0.38); margin-bottom: 6px;
+    }
+    .ct-info .val { font-size: 15px; font-weight: 700; color: #fff; line-height: 1.35; }
+    .ct-info .sub { font-size: 11px; color: rgba(255,255,255,0.55); margin-top: 3px; }
+
+    .ct-logo-wrap { display: flex; flex-direction: column; align-items: center; margin-top: auto; padding-top: 20px; }
+    .ct-logo-row { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+    .ct-logo-circle {
+      width: 54px; height: 54px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), #FBB040);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 0 0 6px rgba(249,115,22,0.15);
+    }
+    .ct-logo-circle svg { width: 30px; height: 30px; fill: white; }
+    .ct-logo-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 28px; font-weight: 700; color: white;
+    }
+    .ct-tagline { font-size: 12px; color: rgba(255,255,255,0.4); font-style: italic; }
+    .ct-bottom-bar {
+      height: 7px;
+      background: linear-gradient(90deg, var(--orange-dark), #FBB040, var(--orange-dark));
+    }
+  </style>
+</head>
+<body>
+
+<!-- ==============================
+     PÁGINA 1 — PORTADA
+============================== -->
+<div class="page cover-page">
+  <div class="cover-accent-top"></div>
+  <div class="cover-orb-1"></div>
+  <div class="cover-orb-2"></div>
+  <div class="cover-orb-3"></div>
+
+  <div class="cover-body">
+
+    <div class="cover-logo-ring">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="50" cy="68" rx="23" ry="18"/>
+        <ellipse cx="25" cy="46" rx="10.5" ry="13"/>
+        <ellipse cx="43" cy="36" rx="10.5" ry="13"/>
+        <ellipse cx="61" cy="36" rx="10.5" ry="13"/>
+        <ellipse cx="77" cy="46" rx="10.5" ry="13"/>
+      </svg>
+    </div>
+
+    <div class="cover-eyebrow">✦ Pet Shop Especializado ✦</div>
+
+    <div class="cover-title">
+      Patitas<br><span>Pet Shop</span>
+    </div>
+
+    <div class="cover-rule"></div>
+
+    <div class="cover-catalog-name">Catálogo de Accesorios y Cuidado</div>
+    <div class="cover-catalog-sub">Todo lo que tu perro necesita en un solo lugar</div>
+
+    <!-- Grilla 2x2 de categorías -->
+    <div class="cover-icons-grid">
+
+      <!-- Juguetes -->
+      <div class="cover-icon-card">
+        <div class="cover-icon-circle cic-1">
+          <!-- Pelota / juguete -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" fill="white"/>
+          </svg>
+        </div>
+        <span class="cover-icon-label">Juguetes</span>
+      </div>
+
+      <!-- Camas -->
+      <div class="cover-icon-card">
+        <div class="cover-icon-circle cic-2">
+          <!-- Cama / sleep -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z" fill="white"/>
+          </svg>
+        </div>
+        <span class="cover-icon-label">Camas y Descanso</span>
+      </div>
+
+      <!-- Correas -->
+      <div class="cover-icon-card">
+        <div class="cover-icon-circle cic-3">
+          <!-- Correa (link/chain icon) -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 7h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1 0 1.43-.98 2.63-2.31 2.98l1.46 1.46C20.88 15.61 22 13.87 22 12c0-2.76-2.24-5-5-5zm-1 4h-2.19l2 2H16v-2zM2 4.27l3.11 3.11C3.29 8.12 2 9.91 2 12c0 2.76 2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1 0-1.71 1.39-3.1 3.1-3.1h.73L9.9 11H8v2h3.73l2 2H8v1.9h4.27l2 2L15.73 17 3.27 4.27 2 4.27z" fill="white"/>
+          </svg>
+        </div>
+        <span class="cover-icon-label">Correas y Collares</span>
+      </div>
+
+      <!-- Higiene -->
+      <div class="cover-icon-card">
+        <div class="cover-icon-circle cic-4">
+          <!-- Higiene / water drop -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2c-5.33 4.55-8 8.48-8 11.8C4 17.78 7.58 22 12 22s8-4.22 8-8.2c0-3.32-2.67-7.25-8-11.8zm0 18c-3.35 0-6-2.57-6-5.2 0-2.34 1.95-5.44 6-9.14 4.05 3.7 6 6.79 6 9.14C18 17.43 15.35 20 12 20zm-4-7.19C8 14.77 9.86 17 12 17s4-2.23 4-4.19c0-1.67-1.31-3.83-4-6.04C9.31 8.98 8 11.13 8 12.81z" fill="white"/>
+          </svg>
+        </div>
+        <span class="cover-icon-label">Higiene y Cuidado</span>
+      </div>
+
+    </div>
+
+    <div class="cover-pill">Lista de Precios · 2025</div>
+  </div>
+
+  <div class="cover-footer-note">
+    📞 +54 11 1234-5678 &nbsp;|&nbsp; 📍 Av. Siempreverde 1234, Buenos Aires &nbsp;|&nbsp; 📱 @patitaspetshop
+  </div>
+  <div class="cover-accent-bottom"></div>
+</div>
+
+
+<!-- ==============================
+     PÁGINA 2 — JUGUETES
+============================== -->
+<div class="page">
+
+  <div class="ph">
+    <div class="ph-brand">
+      <div class="ph-dot">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="50" cy="68" rx="23" ry="18"/><ellipse cx="25" cy="46" rx="10.5" ry="13"/>
+          <ellipse cx="43" cy="36" rx="10.5" ry="13"/><ellipse cx="61" cy="36" rx="10.5" ry="13"/>
+          <ellipse cx="77" cy="46" rx="10.5" ry="13"/>
+        </svg>
+      </div>
+      <span class="ph-name">Patitas Pet Shop</span>
+    </div>
+    <div class="ph-contact">
+      📞 +54 11 1234-5678 &nbsp;·&nbsp; 📱 @patitaspetshop &nbsp;·&nbsp; 📍 Av. Siempreverde 1234, CABA
+    </div>
+  </div>
+
+  <div class="sec-banner sb-toys">
+    <div class="sec-icon si-toys">
+      <!-- Toy / ball icon -->
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4.07 11H6c.26-2.74 1.56-5.17 3.54-6.89C6.48 5.07 4.37 7.79 4.07 11zm2.58 7.45C4.53 16.62 3.09 13.88 3.07 11C3.66 14.41 5.64 17.34 8.54 19H8.5C7.14 18.33 5.98 17.47 6.65 18.45zM6 13h-1.93c.39 3.29 2.78 5.96 5.93 6.8V13H6zm4 6.8c3.15-.84 5.54-3.51 5.93-6.8H14v6.8h-4zm6-7.8h1.93c-.39-3.29-2.78-5.96-5.93-6.8V12h4zm-6-6.8c-3.15.84-5.54 3.51-5.93 6.8H10V5.2h-4zm7.85 1.69C17.52 5.07 14.85 3.22 11.86 3.07c2.07.81 3.76 2.35 4.71 4.21.46.9.79 1.89.93 2.93h1.93c-.17-1.28-.57-2.5-1.58-3.32zM18 13h-1.93c-.26 2.74-1.56 5.17-3.54 6.89C15.52 18.93 17.63 16.21 18 13v0z" fill="white"/>
+      </svg>
+    </div>
+    <div class="sec-text">
+      <h2 class="st-toys">🎾 Juguetes para Perros</h2>
+      <p>Diversión, estimulación mental y desgaste de energía para todas las razas y tamaños</p>
+    </div>
+    <div class="sec-badge sbg-toys">Sección 01</div>
+  </div>
+
+  <p class="sec-note">* Precios en pesos argentinos (ARS) con IVA incluido · Sujetos a modificación sin previo aviso · Consulte stock disponible</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead class="th-toys">
+        <tr>
+          <th>Marca</th>
+          <th>Producto</th>
+          <th>Talle / Medida</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td><span class="b br-kong">Kong</span></td>
+          <td class="prod">Classic — Goma natural rellenable</td>
+          <td><span class="badge-pres">Talle S</span></td>
+          <td class="price pr-toys">$12.500</td>
+        </tr>
+        <tr>
+          <td><span class="b br-kong">Kong</span></td>
+          <td class="prod">Classic — Goma natural rellenable</td>
+          <td><span class="badge-pres">Talle M</span></td>
+          <td class="price pr-toys">$16.800</td>
+        </tr>
+        <tr>
+          <td><span class="b br-kong">Kong</span></td>
+          <td class="prod">Classic — Goma natural rellenable</td>
+          <td><span class="badge-pres">Talle L</span></td>
+          <td class="price pr-toys">$22.000</td>
+        </tr>
+        <tr>
+          <td><span class="b br-kong">Kong</span></td>
+          <td class="prod">Extreme — Ultra resistente razas fuertes</td>
+          <td><span class="badge-pres">Talle M</span></td>
+          <td class="price pr-toys">$19.500</td>
+        </tr>
+        <tr>
+          <td><span class="b br-kong">Kong</span></td>
+          <td class="prod">Extreme — Ultra resistente razas fuertes</td>
+          <td><span class="badge-pres">Talle L</span></td>
+          <td class="price pr-toys">$25.000</td>
+        </tr>
+        <tr>
+          <td><span class="b br-gen">Genérico</span></td>
+          <td class="prod">Pelota de tenis — Pack x 3 unidades</td>
+          <td><span class="badge-pres">Estándar</span></td>
+          <td class="price pr-toys">$3.500</td>
+        </tr>
+        <tr>
+          <td><span class="b br-gen">Genérico</span></td>
+          <td class="prod">Juguete mordedor cuerda trenzada</td>
+          <td><span class="badge-pres">Talle M</span></td>
+          <td class="price pr-toys">$5.800</td>
+        </tr>
+        <tr>
+          <td><span class="b br-gen">Genérico</span></td>
+          <td class="prod">Juguete mordedor cuerda trenzada</td>
+          <td><span class="badge-pres">Talle L</span></td>
+          <td class="price pr-toys">$7.200</td>
+        </tr>
+        <tr>
+          <td><span class="b br-gen">Genérico</span></td>
+          <td class="prod">Frisbee de goma flexible</td>
+          <td><span class="badge-pres">Estándar</span></td>
+          <td class="price pr-toys">$6.200</td>
+        </tr>
+        <tr>
+          <td><span class="b br-petzone">Pet Zone</span></td>
+          <td class="prod">Dispensador interactivo de premios</td>
+          <td><span class="badge-pres">Estándar</span></td>
+          <td class="price pr-toys">$14.500</td>
+        </tr>
+        <tr>
+          <td><span class="b br-gen">Genérico</span></td>
+          <td class="prod">Pelota sonora — varios colores</td>
+          <td><span class="badge-pres">Talle M</span></td>
+          <td class="price pr-toys">$4.200</td>
+        </tr>
+        <tr>
+          <td><span class="b br-gen">Genérico</span></td>
+          <td class="prod">Hueso de nylon — sabor pollo</td>
+          <td><span class="badge-pres">Talle S</span></td>
+          <td class="price pr-toys">$7.500</td>
+        </tr>
+        <tr>
+          <td><span class="b br-gen">Genérico</span></td>
+          <td class="prod">Hueso de nylon — sabor pollo</td>
+          <td><span class="badge-pres">Talle M</span></td>
+          <td class="price pr-toys">$9.800</td>
+        </tr>
+        <tr>
+          <td><span class="b br-gen">Genérico</span></td>
+          <td class="prod">Peluche con sonido interno</td>
+          <td><span class="badge-pres">Talle M</span></td>
+          <td class="price pr-toys">$6.500</td>
+        </tr>
+        <tr>
+          <td><span class="b br-zeedog">Zeedog</span></td>
+          <td class="prod">Puzzle interactivo — Nivel 2</td>
+          <td><span class="badge-pres">Estándar</span></td>
+          <td class="price pr-toys">$18.000</td>
+        </tr>
+        <tr>
+          <td><span class="b br-zeedog">Zeedog</span></td>
+          <td class="prod">Puzzle interactivo — Nivel 3 (avanzado)</td>
+          <td><span class="badge-pres">Estándar</span></td>
+          <td class="price pr-toys">$24.500</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tbl-note">
+    ✦ Todos los precios incluyen IVA &nbsp;·&nbsp; ✦ Stock sujeto a disponibilidad &nbsp;·&nbsp; ✦ Consulte descuentos en compras mayoristas &nbsp;·&nbsp; ✦ Aceptamos todas las formas de pago
+  </div>
+
+  <div class="pf">
+    <span>Patitas Pet Shop — Catálogo 2025</span>
+    <span class="pf-hi" style="color:#F59E0B;">Sección 01 · Juguetes para Perros</span>
+    <span>Página 2 / 6</span>
+  </div>
+</div>
+
+
+<!-- ==============================
+     PÁGINA 3 — CAMAS Y DESCANSO
+============================== -->
+<div class="page">
+
+  <div class="ph">
+    <div class="ph-brand">
+      <div class="ph-dot">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="50" cy="68" rx="23" ry="18"/><ellipse cx="25" cy="46" rx="10.5" ry="13"/>
+          <ellipse cx="43" cy="36" rx="10.5" ry="13"/><ellipse cx="61" cy="36" rx="10.5" ry="13"/>
+          <ellipse cx="77" cy="46" rx="10.5" ry="13"/>
+        </svg>
+      </div>
+      <span class="ph-name">Patitas Pet Shop</span>
+    </div>
+    <div class="ph-contact">
+      📞 +54 11 1234-5678 &nbsp;·&nbsp; 📱 @patitaspetshop &nbsp;·&nbsp; 📍 Av. Siempreverde 1234, CABA
+    </div>
+  </div>
+
+  <div class="sec-banner sb-beds">
+    <div class="sec-icon si-beds">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z" fill="white"/>
+      </svg>
+    </div>
+    <div class="sec-text">
+      <h2 class="st-beds">🛏 Camas y Descanso</h2>
+      <p>Comodidad y descanso óptimo para tu mascota en todas las etapas de su vida</p>
+    </div>
+    <div class="sec-badge sbg-beds">Sección 02</div>
+  </div>
+
+  <p class="sec-note">* Precios en pesos argentinos (ARS) con IVA incluido · Sujetos a modificación sin previo aviso · Consulte stock disponible</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead class="th-beds">
+        <tr>
+          <th>Marca</th>
+          <th>Producto</th>
+          <th>Talle / Medida</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- Cama redonda con bordes -->
+        <tr>
+          <td><span class="b br-karlie">Karlie</span></td>
+          <td class="prod">Cama redonda acolchada con bordes</td>
+          <td><span class="badge-pres">S · hasta 5 kg</span></td>
+          <td class="price pr-beds">$18.500</td>
+        </tr>
+        <tr>
+          <td><span class="b br-karlie">Karlie</span></td>
+          <td class="prod">Cama redonda acolchada con bordes</td>
+          <td><span class="badge-pres">M · hasta 15 kg</span></td>
+          <td class="price pr-beds">$24.000</td>
+        </tr>
+        <tr>
+          <td><span class="b br-karlie">Karlie</span></td>
+          <td class="prod">Cama redonda acolchada con bordes</td>
+          <td><span class="badge-pres">L · hasta 30 kg</span></td>
+          <td class="price pr-beds">$32.000</td>
+        </tr>
+        <tr>
+          <td><span class="b br-karlie">Karlie</span></td>
+          <td class="prod">Cama redonda acolchada con bordes</td>
+          <td><span class="badge-pres">XL · hasta 50 kg</span></td>
+          <td class="price pr-beds">$42.000</td>
+        </tr>
+
+        <!-- Colchoneta lavable -->
+        <tr>
+          <td><span class="b br-gen">Genérico</span></td>
+          <td class="prod">Colchoneta lavable antideslizante</td>
+          <td><span class="badge-pres">S · 50×40 cm</span></td>
+          <td class="price pr-beds">$12.000</td>
+        </tr>
+        <tr>
+          <td><span class="b br-gen">Genérico</span></td>
+          <td class="prod">Colchoneta lavable antideslizante</td>
+          <td><span class="badge-pres">M · 70×55 cm</span></td>
+          <td class="price pr-beds">$16.500</td>
+        </tr>
+        <tr>
+          <td><span class="b br-gen">Genérico</span></td>
+          <td class="prod">Colchoneta lavable antideslizante</td>
+          <td><span class="badge-pres">L · 100×70 cm</span></td>
+          <td class="price pr-beds">$22.000</td>
+        </tr>
+
+        <!-- Ortopédica -->
+        <tr>
+          <td><span class="b br-ortopet">Ortopet</span></td>
+          <td class="prod">Cama ortopédica Memory Foam</td>
+          <td><span class="badge-pres">M · 65×50 cm</span></td>
+          <td class="price pr-beds">$38.000</td>
+        </tr>
+        <tr>
+          <td><span class="b br-ortopet">Ortopet</span></td>
+          <td class="prod">Cama ortopédica Memory Foam</td>
+          <td><span class="badge-pres">L · 90×70 cm</span></td>
+          <td class="price pr-beds">$52.000</td>
+        </tr>
+        <tr>
+          <td><span class="b br-ortopet">Ortopet</span></td>
+          <td class="prod">Cama ortopédica Memory Foam</td>
+          <td><span class="badge-pres">XL · 120×90 cm</span></td>
+          <td class="price pr-beds">$68.000</td>
+        </tr>
+
+        <!-- Cama cueva -->
+        <tr>
+          <td><span class="b br-pethouse">PetHouse</span></td>
+          <td class="prod">Cama tipo cueva con capucha lavable</td>
+          <td><span class="badge-pres">S · 45×45 cm</span></td>
+          <td class="price pr-beds">$21.000</td>
+        </tr>
+        <tr>
+          <td><span class="b br-pethouse">PetHouse</span></td>
+          <td class="prod">Cama tipo cueva con capucha lavable</td>
+          <td><span class="badge-pres">M · 60×60 cm</span></td>
+          <td class="price pr-beds">$28.500</td>
+        </tr>
+
+        <!-- Manta polar -->
+        <tr>
+          <td><span class="b br-gen">Genérico</span></td>
+          <td class="prod">Manta polar suave — varios colores</td>
+          <td><span class="badge-pres">M · 80×60 cm</span></td>
+          <td class="price pr-beds">$8.500</td>
+        </tr>
+        <tr>
+          <td><span class="b br-gen">Genérico</span></td>
+          <td class="prod">Manta polar suave — varios colores</td>
+          <td><span class="badge-pres">L · 120×80 cm</span></td>
+          <td class="price pr-beds">$11.500</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tbl-note">
+    ✦ Todos los precios incluyen IVA &nbsp;·&nbsp; ✦ Stock sujeto a disponibilidad &nbsp;·&nbsp; ✦ Consulte descuentos en compras mayoristas &nbsp;·&nbsp; ✦ Las camas ortopédicas tienen garantía de 6 meses
+  </div>
+
+  <div class="pf">
+    <span>Patitas Pet Shop — Catálogo 2025</span>
+    <span class="pf-hi" style="color:#A78BFA;">Sección 02 · Camas y Descanso</span>
+    <span>Página 3 / 6</span>
+  </div>
+</div>
+
+
+<!-- ==============================
+     PÁGINA 4 — CORREAS Y COLLARES
+============================== -->
+<div class="page">
+
+  <div class="ph">
+    <div class="ph-brand">
+      <div class="ph-dot">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="50" cy="68" rx="23" ry="18"/><ellipse cx="25" cy="46" rx="10.5" ry="13"/>
+          <ellipse cx="43" cy="36" rx="10.5" ry="13"/><ellipse cx="61" cy="36" rx="10.5" ry="13"/>
+          <ellipse cx="77" cy="46" rx="10.5" ry="13"/>
+        </svg>
+      </div>
+      <span class="ph-name">Patitas Pet Shop</span>
+    </div>
+    <div class="ph-contact">
+      📞 +54 11 1234-5678 &nbsp;·&nbsp; 📱 @patitaspetshop &nbsp;·&nbsp; 📍 Av. Siempreverde 1234, CABA
+    </div>
+  </div>
+
+  <div class="sec-banner sb-leads">
+    <div class="sec-icon si-leads">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17 7h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1 0 1.43-.98 2.63-2.31 2.98l1.46 1.46C20.88 15.61 22 13.87 22 12c0-2.76-2.24-5-5-5zm-1 4h-2.19l2 2H16v-2zM2 4.27l3.11 3.11C3.29 8.12 2 9.91 2 12c0 2.76 2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1 0-1.71 1.39-3.1 3.1-3.1h.73L9.9 11H8v2h3.73l2 2H8v1.9h4.27l2 2L15.73 17 3.27 4.27 2 4.27z" fill="white"/>
+      </svg>
+    </div>
+    <div class="sec-text">
+      <h2 class="st-leads">🦮 Correas, Collares y Arneses</h2>
+      <p>Seguridad y comodidad para cada paseo, en todos los tamaños y estilos</p>
+    </div>
+    <div class="sec-badge sbg-leads">Sección 03</div>
+  </div>
+
+  <p class="sec-note">* Precios en pesos argentinos (ARS) con IVA incluido · Sujetos a modificación sin previo aviso · Consulte stock disponible</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead class="th-leads">
+        <tr>
+          <th>Marca</th>
+          <th>Producto</th>
+          <th>Talle / Medida</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- Correas retráctiles -->
+        <tr>
+          <td><span class="b br-flexi">Flexi</span></td>
+          <td class="prod">Correa retráctil 5 metros</td>
+          <td><span class="badge-pres">Hasta 12 kg</span></td>
+          <td class="price pr-leads">$15.000</td>
+        </tr>
+        <tr>
+          <td><span class="b br-flexi">Flexi</span></td>
+          <td class="prod">Correa retráctil 5 metros</td>
+          <td><span class="badge-pres">Hasta 25 kg</span></td>
+          <td class="price pr-leads">$19.500</td>
+        </tr>
+        <tr>
+          <td><span class="b br-flexi">Flexi</span></td>
+          <td class="prod">Correa retráctil 8 metros — Long</td>
+          <td><span class="badge-pres">Hasta 50 kg</span></td>
+          <td class="price pr-leads">$28.000</td>
+        </tr>
+
+        <!-- Correas nylon -->
+        <tr>
+          <td><span class="b br-hunter">Hunter</span></td>
+          <td class="prod">Correa nylon resistente 1.5 m</td>
+          <td><span class="badge-pres">Talle S / M</span></td>
+          <td class="price pr-leads">$3.800</td>
+        </tr>
+        <tr>
+          <td><span class="b br-hunter">Hunter</span></td>
+          <td class="prod">Correa nylon resistente 1.5 m</td>
+          <td><span class="badge-pres">Talle L / XL</span></td>
+          <td class="price pr-leads">$5.200</td>
+        </tr>
+
+        <!-- Collares -->
+        <tr>
+          <td><span class="b br-hunter">Hunter</span></td>
+          <td class="prod">Collar nylon ajustable — varios colores</td>
+          <td><span class="badge-pres">Talle S</span></td>
+          <td class="price pr-leads">$2.800</td>
+        </tr>
+        <tr>
+          <td><span class="b br-hunter">Hunter</span></td>
+          <td class="prod">Collar nylon ajustable — varios colores</td>
+          <td><span class="badge-pres">Talle M</span></td>
+          <td class="price pr-leads">$3.500</td>
+        </tr>
+        <tr>
+          <td><span class="b br-hunter">Hunter</span></td>
+          <td class="prod">Collar nylon ajustable — varios colores</td>
+          <td><span class="badge-pres">Talle L</span></td>
+          <td class="price pr-leads">$4.200</td>
+        </tr>
+        <tr>
+          <td><span class="b br-gen">Genérico</span></td>
+          <td class="prod">Collar reflectante con luz LED integrada</td>
+          <td><span class="badge-pres">Talle M</span></td>
+          <td class="price pr-leads">$5.800</td>
+        </tr>
+
+        <!-- Arneses -->
+        <tr>
+          <td><span class="b br-ruffwear">Ruffwear</span></td>
+          <td class="prod">Arnés chaleco regulable — Front Range</td>
+          <td><span class="badge-pres">Talle S</span></td>
+          <td class="price pr-leads">$8.500</td>
+        </tr>
+        <tr>
+          <td><span class="b br-ruffwear">Ruffwear</span></td>
+          <td class="prod">Arnés chaleco regulable — Front Range</td>
+          <td><span class="badge-pres">Talle M</span></td>
+          <td class="price pr-leads">$10.500</td>
+        </tr>
+        <tr>
+          <td><span class="b br-ruffwear">Ruffwear</span></td>
+          <td class="prod">Arnés chaleco regulable — Front Range</td>
+          <td><span class="badge-pres">Talle L</span></td>
+          <td class="price pr-leads">$13.000</td>
+        </tr>
+        <tr>
+          <td><span class="b br-ruffwear">Ruffwear</span></td>
+          <td class="prod">Arnés anti-tirones — Easy Walk</td>
+          <td><span class="badge-pres">Talle M</span></td>
+          <td class="price pr-leads">$14.500</td>
+        </tr>
+        <tr>
+          <td><span class="b br-ruffwear">Ruffwear</span></td>
+          <td class="prod">Arnés anti-tirones — Easy Walk</td>
+          <td><span class="badge-pres">Talle L</span></td>
+          <td class="price pr-leads">$17.000</td>
+        </tr>
+
+        <!-- Bozales -->
+        <tr>
+          <td><span class="b br-gen">Genérico</span></td>
+          <td class="prod">Bozal nylon regulable</td>
+          <td><span class="badge-pres">Talle S</span></td>
+          <td class="price pr-leads">$4.500</td>
+        </tr>
+        <tr>
+          <td><span class="b br-gen">Genérico</span></td>
+          <td class="prod">Bozal nylon regulable</td>
+          <td><span class="badge-pres">Talle M</span></td>
+          <td class="price pr-leads">$5.800</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tbl-note">
+    ✦ Todos los precios incluyen IVA &nbsp;·&nbsp; ✦ Stock sujeto a disponibilidad &nbsp;·&nbsp; ✦ Consulte personalización de collares con nombre y teléfono &nbsp;·&nbsp; ✦ Aceptamos todas las formas de pago
+  </div>
+
+  <div class="pf">
+    <span>Patitas Pet Shop — Catálogo 2025</span>
+    <span class="pf-hi" style="color:#34D399;">Sección 03 · Correas, Collares y Arneses</span>
+    <span>Página 4 / 6</span>
+  </div>
+</div>
+
+
+<!-- ==============================
+     PÁGINA 5 — HIGIENE Y CUIDADO
+============================== -->
+<div class="page">
+
+  <div class="ph">
+    <div class="ph-brand">
+      <div class="ph-dot">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="50" cy="68" rx="23" ry="18"/><ellipse cx="25" cy="46" rx="10.5" ry="13"/>
+          <ellipse cx="43" cy="36" rx="10.5" ry="13"/><ellipse cx="61" cy="36" rx="10.5" ry="13"/>
+          <ellipse cx="77" cy="46" rx="10.5" ry="13"/>
+        </svg>
+      </div>
+      <span class="ph-name">Patitas Pet Shop</span>
+    </div>
+    <div class="ph-contact">
+      📞 +54 11 1234-5678 &nbsp;·&nbsp; 📱 @patitaspetshop &nbsp;·&nbsp; 📍 Av. Siempreverde 1234, CABA
+    </div>
+  </div>
+
+  <div class="sec-banner sb-hygn">
+    <div class="sec-icon si-hygn">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2c-5.33 4.55-8 8.48-8 11.8C4 17.78 7.58 22 12 22s8-4.22 8-8.2c0-3.32-2.67-7.25-8-11.8zm0 18c-3.35 0-6-2.57-6-5.2 0-2.34 1.95-5.44 6-9.14 4.05 3.7 6 6.79 6 9.14C18 17.43 15.35 20 12 20zm-4-7.19C8 14.77 9.86 17 12 17s4-2.23 4-4.19c0-1.67-1.31-3.83-4-6.04C9.31 8.98 8 11.13 8 12.81z" fill="white"/>
+      </svg>
+    </div>
+    <div class="sec-text">
+      <h2 class="st-hygn">🧴 Higiene y Cuidado</h2>
+      <p>Productos de aseo y cuidado para mantener a tu perro limpio, sano y feliz</p>
+    </div>
+    <div class="sec-badge sbg-hygn">Sección 04</div>
+  </div>
+
+  <p class="sec-note">* Precios en pesos argentinos (ARS) con IVA incluido · Sujetos a modificación sin previo aviso · Consulte stock disponible</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead class="th-hygn">
+        <tr>
+          <th>Marca</th>
+          <th>Producto</th>
+          <th>Presentación</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- Shampoos -->
+        <tr>
+          <td><span class="b br-banhu">Bañadero</span></td>
+          <td class="prod">Shampoo neutro pH balanceado</td>
+          <td><span class="badge-pres">500 ml</span></td>
+          <td class="price pr-hygn">$6.500</td>
+        </tr>
+        <tr>
+          <td><span class="b br-banhu">Bañadero</span></td>
+          <td class="prod">Shampoo antipulgas y garrapatas</td>
+          <td><span class="badge-pres">500 ml</span></td>
+          <td class="price pr-hygn">$8.200</td>
+        </tr>
+        <tr>
+          <td><span class="b br-banhu">Bañadero</span></td>
+          <td class="prod">Shampoo blanco amplificador</td>
+          <td><span class="badge-pres">500 ml</span></td>
+          <td class="price pr-hygn">$7.800</td>
+        </tr>
+        <tr>
+          <td><span class="b br-banhu">Bañadero</span></td>
+          <td class="prod">Shampoo pelo oscuro intensificador</td>
+          <td><span class="badge-pres">500 ml</span></td>
+          <td class="price pr-hygn">$7.800</td>
+        </tr>
+        <tr>
+          <td><span class="b br-banhu">Bañadero</span></td>
+          <td class="prod">Acondicionador desenredante</td>
+          <td><span class="badge-pres">500 ml</span></td>
+          <td class="price pr-hygn">$7.000</td>
+        </tr>
+
+        <!-- Colonia -->
+        <tr>
+          <td><span class="b br-gen">Genérico</span></td>
+          <td class="prod">Colonia para mascotas — Talco</td>
+          <td><span class="badge-pres">100 ml</span></td>
+          <td class="price pr-hygn">$5.500</td>
+        </tr>
+        <tr>
+          <td><span class="b br-gen">Genérico</span></td>
+          <td class="prod">Colonia para mascotas — Frutal</td>
+          <td><span class="badge-pres">100 ml</span></td>
+          <td class="price pr-hygn">$5.500</td>
+        </tr>
+
+        <!-- Cepillos -->
+        <tr>
+          <td><span class="b br-fur">Furminator</span></td>
+          <td class="prod">Cepillo deslanador — pelo corto</td>
+          <td><span class="badge-pres">Estándar</span></td>
+          <td class="price pr-hygn">$15.800</td>
+        </tr>
+        <tr>
+          <td><span class="b br-fur">Furminator</span></td>
+          <td class="prod">Cepillo deslanador — pelo largo</td>
+          <td><span class="badge-pres">Estándar</span></td>
+          <td class="price pr-hygn">$17.500</td>
+        </tr>
+        <tr>
+          <td><span class="b br-gen">Genérico</span></td>
+          <td class="prod">Peine antiparasitario inoxidable</td>
+          <td><span class="badge-pres">Estándar</span></td>
+          <td class="price pr-hygn">$3.800</td>
+        </tr>
+
+        <!-- Cortauñas y dental -->
+        <tr>
+          <td><span class="b br-gen">Genérico</span></td>
+          <td class="prod">Cortauñas profesional con tope</td>
+          <td><span class="badge-pres">Estándar</span></td>
+          <td class="price pr-hygn">$6.500</td>
+        </tr>
+        <tr>
+          <td><span class="b br-vets">Vets Best</span></td>
+          <td class="prod">Kit dental — pasta + cepillo</td>
+          <td><span class="badge-pres">Kit x 2 pzas</span></td>
+          <td class="price pr-hygn">$7.800</td>
+        </tr>
+
+        <!-- Toallitas y desodorante -->
+        <tr>
+          <td><span class="b br-gen">Genérico</span></td>
+          <td class="prod">Toallitas húmedas para mascotas</td>
+          <td><span class="badge-pres">Pack x 40</span></td>
+          <td class="price pr-hygn">$3.200</td>
+        </tr>
+        <tr>
+          <td><span class="b br-gen">Genérico</span></td>
+          <td class="prod">Desodorante ambiental — mascotas</td>
+          <td><span class="badge-pres">300 ml</span></td>
+          <td class="price pr-hygn">$4.800</td>
+        </tr>
+        <tr>
+          <td><span class="b br-gen">Genérico</span></td>
+          <td class="prod">Bolsas higiénicas para paseo</td>
+          <td><span class="badge-pres">Pack x 60</span></td>
+          <td class="price pr-hygn">$2.500</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tbl-note">
+    ✦ Todos los precios incluyen IVA &nbsp;·&nbsp; ✦ Stock sujeto a disponibilidad &nbsp;·&nbsp; ✦ Consulte descuentos en compras mayoristas &nbsp;·&nbsp; ✦ Aceptamos todas las formas de pago
+  </div>
+
+  <div class="pf">
+    <span>Patitas Pet Shop — Catálogo 2025</span>
+    <span class="pf-hi" style="color:#22D3EE;">Sección 04 · Higiene y Cuidado</span>
+    <span>Página 5 / 6</span>
+  </div>
+</div>
+
+
+<!-- ==============================
+     PÁGINA 6 — CONTACTO
+============================== -->
+<div class="page contact-page">
+  <div class="ct-top-bar"></div>
+
+  <div style="position:absolute;right:-70px;top:-70px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(249,115,22,0.09) 0%,transparent 70%);"></div>
+  <div style="position:absolute;left:-50px;bottom:100px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(16,185,129,0.08) 0%,transparent 70%);"></div>
+  <div style="position:absolute;right:80px;bottom:60px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(139,92,246,0.07) 0%,transparent 70%);"></div>
+
+  <div class="ct-body">
+
+    <div class="ct-head">
+      <span class="over">✦ Estamos para vos ✦</span>
+      <h2>Contactanos</h2>
+      <p>Encontranos en todos nuestros canales de atención</p>
+      <div class="ct-rule"></div>
+    </div>
+
+    <div class="ct-grid">
+
+      <!-- WhatsApp -->
+      <div class="ct-card">
+        <div class="ct-icon ic-wa">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" fill="white"/>
+          </svg>
+        </div>
+        <div class="ct-info">
+          <div class="lbl">WhatsApp</div>
+          <div class="val">+54 11 1234-5678</div>
+          <div class="sub">Consultas · Pedidos · Asesoramiento</div>
+        </div>
+      </div>
+
+      <!-- Instagram -->
+      <div class="ct-card">
+        <div class="ct-icon ic-ig">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="white"/>
+          </svg>
+        </div>
+        <div class="ct-info">
+          <div class="lbl">Instagram</div>
+          <div class="val">@patitaspetshop</div>
+          <div class="sub">Seguinos para novedades y ofertas</div>
+        </div>
+      </div>
+
+      <!-- Dirección -->
+      <div class="ct-card">
+        <div class="ct-icon ic-loc">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="white"/>
+          </svg>
+        </div>
+        <div class="ct-info">
+          <div class="lbl">Dirección</div>
+          <div class="val">Av. Siempreverde 1234</div>
+          <div class="sub">Buenos Aires, Argentina · Local 5</div>
+        </div>
+      </div>
+
+      <!-- Horarios -->
+      <div class="ct-card">
+        <div class="ct-icon ic-clk">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5z" fill="white"/>
+          </svg>
+        </div>
+        <div class="ct-info">
+          <div class="lbl">Horarios de Atención</div>
+          <div class="val">Lun – Sáb: 9:00 a 19:30 hs</div>
+          <div class="sub">Domingos y feriados: 10:00 a 14:00 hs</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Sección de categorías resumen -->
+    <div style="width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.10);border-radius:16px;padding:20px 28px;margin-bottom:26px;">
+      <div style="font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:14px;text-align:center;">ENCONTRÁ TAMBIÉN EN NUESTRA TIENDA</div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;text-align:center;">
+        <div>
+          <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#F59E0B,#FBBF24);display:flex;align-items:center;justify-content:center;margin:0 auto 7px;">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM11 7h2v6h-2zm0 8h2v2h-2z"/></svg>
+          </div>
+          <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.75);">Juguetes</div>
+        </div>
+        <div>
+          <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#8B5CF6,#A78BFA);display:flex;align-items:center;justify-content:center;margin:0 auto 7px;">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>
+          </div>
+          <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.75);">Camas</div>
+        </div>
+        <div>
+          <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#10B981,#34D399);display:flex;align-items:center;justify-content:center;margin:0 auto 7px;">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M17 7h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1 0 1.43-.98 2.63-2.31 2.98l1.46 1.46C20.88 15.61 22 13.87 22 12c0-2.76-2.24-5-5-5zm-1 4h-2.19l2 2H16v-2zM2 4.27l3.11 3.11C3.29 8.12 2 9.91 2 12c0 2.76 2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1 0-1.71 1.39-3.1 3.1-3.1h.73L9.9 11H8v2h3.73l2 2H8v1.9h4.27l2 2L15.73 17 3.27 4.27 2 4.27z"/></svg>
+          </div>
+          <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.75);">Correas</div>
+        </div>
+        <div>
+          <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#06B6D4,#22D3EE);display:flex;align-items:center;justify-content:center;margin:0 auto 7px;">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M12 2c-5.33 4.55-8 8.48-8 11.8C4 17.78 7.58 22 12 22s8-4.22 8-8.2c0-3.32-2.67-7.25-8-11.8zm0 18c-3.35 0-6-2.57-6-5.2 0-2.34 1.95-5.44 6-9.14 4.05 3.7 6 6.79 6 9.14C18 17.43 15.35 20 12 20z"/></svg>
+          </div>
+          <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.75);">Higiene</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="width:100%;height:1px;background:rgba(255,255,255,0.10);margin-bottom:22px;"></div>
+
+    <div class="ct-logo-wrap">
+      <div class="ct-logo-row">
+        <div class="ct-logo-circle">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="50" cy="68" rx="23" ry="18" fill="white"/>
+            <ellipse cx="25" cy="46" rx="10.5" ry="13" fill="white"/>
+            <ellipse cx="43" cy="36" rx="10.5" ry="13" fill="white"/>
+            <ellipse cx="61" cy="36" rx="10.5" ry="13" fill="white"/>
+            <ellipse cx="77" cy="46" rx="10.5" ry="13" fill="white"/>
+          </svg>
+        </div>
+        <span class="ct-logo-name">Patitas Pet Shop</span>
+      </div>
+      <p class="ct-tagline">"Porque tu mascota se merece lo mejor"</p>
+    </div>
+
+  </div>
+
+  <div class="ct-bottom-bar"></div>
+</div>
+
+</body>
+</html>
